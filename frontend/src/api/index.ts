@@ -1,10 +1,16 @@
 import { API_PREFIX, request } from './http'
 import type {
   AdminResourceListQuery,
+  AdminStats,
+  CitationDetail,
   CourseList,
   CurrentUser,
   LoginRequest,
   MyResourceListQuery,
+  QaAnswer,
+  QaAskRequest,
+  QaLogList,
+  QaLogQuery,
   Resource,
   ResourceList,
   ResourceListQuery,
@@ -104,5 +110,25 @@ export const api = {
   /** 已发布且索引失败的资源重新排队，成功返回 202。 */
   retryResourceIndex(id: string): Promise<Resource> {
     return request<Resource>('POST', `/admin/resources/${encodeURIComponent(id)}/index/retry`)
+  },
+
+  /** 提问（所有登录角色）。无依据时 200 + insufficient_evidence，模型故障走 5xx 错误体。 */
+  ask(payload: QaAskRequest): Promise<QaAnswer> {
+    return request<QaAnswer>('POST', '/qa/ask', payload)
+  },
+  /** 重新请求某个引用片段；资源已下架、未就绪或片段不属于该资源时返回 404。 */
+  getCitation(resourceId: string, chunkId: string): Promise<CitationDetail> {
+    return request<CitationDetail>(
+      'GET',
+      `/resources/${encodeURIComponent(resourceId)}/citations/${encodeURIComponent(chunkId)}`,
+    )
+  },
+  /** 统计数据（仅管理员），days 为 1–180。 */
+  getAdminStats(days?: number): Promise<AdminStats> {
+    return request<AdminStats>('GET', withQuery('/admin/stats', { days }))
+  },
+  /** 匿名问答日志（仅管理员）。 */
+  listQaLogs(query?: QaLogQuery): Promise<QaLogList> {
+    return request<QaLogList>('GET', withQuery('/admin/qa-logs', query))
   },
 }

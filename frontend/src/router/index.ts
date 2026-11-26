@@ -5,16 +5,22 @@ import { session } from '../stores/session'
 import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import PlaceholderView from '../views/PlaceholderView.vue'
+import AdminQaLogsView from '../views/AdminQaLogsView.vue'
 import AdminReviewsView from '../views/AdminReviewsView.vue'
+import AdminStatsView from '../views/AdminStatsView.vue'
 import MyResourcesView from '../views/MyResourcesView.vue'
 import ResourceDetailView from '../views/ResourceDetailView.vue'
+import QaView from '../views/QaView.vue'
 import ResourceListView from '../views/ResourceListView.vue'
 
 /** 已实现页面的组件；未列出的菜单入口仍使用占位页。 */
 const IMPLEMENTED_VIEWS: Record<string, RouteRecordRaw['component']> = {
   '/resources': ResourceListView,
   '/my-resources': MyResourcesView,
+  '/qa': QaView,
   '/admin/reviews': AdminReviewsView,
+  '/admin/stats': AdminStatsView,
+  '/admin/qa-logs': AdminQaLogsView,
 }
 
 const routes: RouteRecordRaw[] = [
