@@ -1,5 +1,13 @@
 # 设计决策记录
 
+## M3 文档切块与索引任务
+
+索引进程按发布时间认领已发布的待索引资料，写入任务令牌和到期时间。解析和嵌入运行在可终止的子进程，模型加载后在该进程中复用。发布状态、任务令牌与租期均通过检查时，才在同一事务内替换目标模型和切块配置的片段，并将资源置为 `ready`。下架或超时会使旧任务失效，重试保留其他版本的片段。
+
+PDF 按页分组，DOCX 读取正文段落，TXT 按原始行定位。位置从 1 开始，空白页或段落保留其编号间隔。默认切块目标为 350 token，重叠 50 token，并优先沿段落或句末断开。切块前核对模型长度上限，写库时固定 Hugging Face 模型版本和切块配置。为限制解析和嵌入的内存占用，每份文档最多索引 100 万个提取字符及 4096 个片段。PDF 页数和 DOCX 解包体积另有限制。
+
+先配置仓库根目录的 `.env`，数据库迁移完成后在项目根目录运行 `powershell -File .\scripts\start-indexer.ps1`。传入 `--once` 可只处理一项任务。索引进程只从 `HF_HOME` 下的本地模型缓存加载模型。未配置此项时使用 Hugging Face 默认缓存目录。
+
 ## PostgreSQL 版本与本地运行
 
 本机使用 PostgreSQL 16.15 和 pgvector 0.8.6。PostgreSQL 17 的 EnterpriseDB 安装包下载返回 403，conda-forge 中 PostgreSQL 17 与 pgvector 的依赖也存在冲突。因此，本机通过 conda-forge 安装兼容的 PostgreSQL 16 与 pgvector，保留原计划中的 PostgreSQL 向量检索设计。

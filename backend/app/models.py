@@ -1,6 +1,7 @@
 import uuid
 from datetime import datetime
 
+from pgvector.sqlalchemy import Vector
 from sqlalchemy import (
     BigInteger,
     Boolean,
@@ -16,6 +17,7 @@ from sqlalchemy import (
     text,
 )
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
+from sqlalchemy.dialects.postgresql import JSONB
 
 
 class Base(DeclarativeBase):
@@ -178,3 +180,27 @@ class ResourceReview(Base):
     action: Mapped[str] = mapped_column(String(16))
     reason: Mapped[str | None] = mapped_column(String(500), nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class ResourceChunk(Base):
+    __tablename__ = "resource_chunks"
+    __table_args__ = (
+        UniqueConstraint(
+            "resource_id", "embedding_model", "chunk_config", "chunk_index",
+            name="uq_resource_chunks_configuration_position",
+        ),
+        CheckConstraint("chunk_index >= 0", name="ck_resource_chunks_position"),
+    )
+
+    id: Mapped[uuid.UUID] = mapped_column(
+        Uuid, primary_key=True, default=uuid.uuid4, server_default=text("gen_random_uuid()")
+    )
+    resource_id: Mapped[uuid.UUID] = mapped_column(
+        Uuid, ForeignKey("resources.id", ondelete="CASCADE", name="fk_resource_chunks_resource_id_resources")
+    )
+    chunk_index: Mapped[int]
+    content: Mapped[str] = mapped_column(Text)
+    locator: Mapped[dict[str, str | int]] = mapped_column(JSONB)
+    embedding: Mapped[list[float]] = mapped_column(Vector(512))
+    embedding_model: Mapped[str] = mapped_column(String(200))
+    chunk_config: Mapped[str] = mapped_column(String(100))

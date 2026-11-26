@@ -23,6 +23,15 @@ class Settings(BaseSettings):
     # 资源原件的存放目录（不在任何静态路径下），默认仓库根下 data/local/uploads
     resource_storage_dir: Path = REPO_ROOT / "data" / "local" / "uploads"
     max_upload_bytes: int = Field(default=20 * 1024 * 1024, ge=1)
+    hf_home: Path | None = None
+    embedding_model: str = Field(default="BAAI/bge-small-zh-v1.5", min_length=1, max_length=150)
+    embedding_revision: str = Field(default="7999e1d3359715c523056ef9478215996d62a620", pattern=r"^[0-9a-f]{40}$")
+    chunk_size: int = Field(default=350, ge=2, le=500)
+    chunk_overlap: int = Field(default=50, ge=0, le=499)
+    index_timeout_seconds: float = Field(default=300, gt=0)
+    index_poll_seconds: float = Field(default=2, gt=0)
+    max_pdf_pages: int = Field(default=200, ge=1)
+    max_docx_unpacked_bytes: int = Field(default=64 * 1024 * 1024, ge=1)
 
     @property
     def allowed_origins(self) -> list[str]:
