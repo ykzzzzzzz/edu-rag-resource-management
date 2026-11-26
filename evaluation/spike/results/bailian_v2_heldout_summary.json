@@ -1,0 +1,66 @@
+{
+  "mode": "live",
+  "provider": "bailian",
+  "model": "qwen-flash-2025-07-28",
+  "temperature": 0.1,
+  "max_tokens": 512,
+  "timeout_seconds": 45.0,
+  "prompt_version": "spike-v2",
+  "interval_seconds": 1.2,
+  "questions_file": "evaluation\\spike\\heldout_unanswerable_draft.jsonl",
+  "questions_run": 15,
+  "generated_at": "2026-11-25T19:49:11",
+  "manual_review_note": "自动指标只是辅助。计划要求人工逐项对照原文：答对、引用能否支撑关键事实、无答案题是否编造事实，都需人工评分。本汇总不判定通过与否。",
+  "totals": {
+    "questions": 15,
+    "answerable": 0,
+    "unanswerable": 15
+  },
+  "structure": {
+    "pass": 15,
+    "total": 15,
+    "pass_rate": 1.0
+  },
+  "answerable_auto": {
+    "status_answered_and_structure_ok": 0,
+    "false_refusal_auto": 0,
+    "gold_citation_hit": 0,
+    "gold_citation_hit_rate": null,
+    "note": "编号命中仅表示引用编号与金标准编号有交集，不代表引用支持关键事实，需人工判定。"
+  },
+  "unanswerable_auto": {
+    "correct_refusal_auto": 15,
+    "wrongly_answered_auto": 0,
+    "note": "自动判断只看 status 是否为 insufficient_evidence，是否编造事实需人工确认。"
+  },
+  "latency_ms": {
+    "median": 648.6,
+    "max": 1636.4,
+    "count": 15
+  },
+  "tokens": {
+    "input_total": 8555,
+    "output_total": 480,
+    "records_without_usage": 0
+  },
+  "errors": {},
+  "screening_reference_lines": {
+    "structure": {
+      "reference": ">= 18/15",
+      "auto_pass_count": 15,
+      "verdict": "自动校验未达标"
+    },
+    "answerable_correct": {
+      "reference": ">= 12/0",
+      "auto_status_answered_count": 0,
+      "verdict": "待人工评分",
+      "note": "答对且引用能支撑关键事实，需对照原文人工判定。"
+    },
+    "unanswerable_refusal": {
+      "reference": ">= 4/15",
+      "auto_correct_refusal_count": 15,
+      "verdict": "待人工评分",
+      "note": "自动计数仅供参考，需确认拒答时未编造事实。"
+    }
+  }
+}

@@ -6,3 +6,6 @@ __pycache__/
 *.py[cod]
 node_modules/
 dist/
+
+# 本地演示账号与其他本机生成的数据（演示密码等）
+data/local/
