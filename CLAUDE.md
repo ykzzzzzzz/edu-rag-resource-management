@@ -57,4 +57,27 @@ $env:SCF_TEST_REAL_EMBEDDINGS='1'; python -m pytest tests/test_index_worker.py
 - 汇报时区分"亲自运行过"和"只读过代码"，给出实际的测试数量，没验证的要明说。
 - 用中文和用户交流，说话直接、简短。
 - 改动 `DEVELOPMENT_PLAN.md`、`.gitignore` 或删除数据前先问用户。
-- 每完成一个里程碑，更新 `docs/progress-claude.md` 和 `docs/handoff.md`。
+
+## 开发记录必须随改动更新
+
+用户同时用 Claude 和 Codex 开发，两边只靠文档交接。记录没更新，另一方就会重复开发，或在过时的状态上继续改。
+
+**开工前**：先读 `docs/handoff.md`、`docs/progress-claude.md`、`docs/progress-codex.md`，确认要做的事有没有人已经做过或正在做。发现记录和代码、数据库的实际状态不一致时，先以实际状态为准，把记录改正，再开始开发。
+
+**每完成或更新一部分功能后，在同一次提交里更新对应的记录**，不要攒到里程碑结束再补：
+
+| 发生了什么 | 必须更新 |
+| --- | --- |
+| 完成或修改了一个功能、修了一个 bug | `docs/progress-claude.md`：做了什么、运行过哪些验证（附实际测试数量）、哪些没验证 |
+| 当前状态、下一步、已知问题有变化 | `docs/handoff.md` 的"一句话现状""里程碑""下一步""已知问题与待办" |
+| 数据库迁移或开发库数据有变化 | `docs/handoff.md` 的"开发库现有数据"，写明迁移版本和备份文件 |
+| 新的设计取舍、参数选择、模型或实验结论 | `docs/decisions.md` |
+| 启动方式、命令、环境、必读文档有变化 | `CLAUDE.md` 和 `docs/handoff.md` 的"环境与启动" |
+| 核对了 Codex 或子 agent 的工作 | `docs/progress-claude.md`，写明核对方式和结果 |
+
+要求：
+
+- 记录里写清最后更新日期。已完成的待办要删掉或标为完成，不要只追加新内容，让旧的说法留在文件里。
+- 只写亲自确认过的事实。只读过代码、或来自他人报告的内容要注明。
+- `docs/progress-codex.md` 由 Codex 维护，Claude 不改它的内容。发现其中有过时或错误的说法，写进 `docs/progress-claude.md` 并告诉用户。
+- 一次工作结束前，检查以上文件是否都已更新，再提交推送。
