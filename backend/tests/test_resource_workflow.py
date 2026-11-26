@@ -1,6 +1,8 @@
 """资源可见性、审核状态和列表查询的集成测试。"""
 
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
+from threading import Barrier
 from uuid import UUID
 
 import pytest
@@ -61,6 +63,31 @@ def test_rejected_resource_can_be_revised_and_resubmitted(actors, course, db_ses
     published = approve(actors.admin, rid).json()
     assert published["title"] == "补充后的资料"
     assert published["review_reason"] is None
+
+
+def test_concurrent_reviews_only_record_the_winner(actors, course, login, db_session_factory, seed_users):
+    rid = make_in_state(actors, course["id"], "pending")
+    second_admin = login("admin02")
+    start = Barrier(2, timeout=5)
+
+    def submit_review(review, admin):
+        start.wait()
+        return review(admin, rid)
+
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        approval = pool.submit(submit_review, approve, actors.admin)
+        rejection = pool.submit(submit_review, reject, second_admin)
+        responses = [approval.result(timeout=10), rejection.result(timeout=10)]
+    assert sorted(response.status_code for response in responses) == [200, 409]
+
+    approved = responses[0].status_code == 200
+    winner = "approve" if approved else "reject"
+    reviewer = seed_users["admin01" if approved else "admin02"]
+    events = reviews_of(db_session_factory, rid)
+    assert [(event.action, str(event.reviewer_id)) for event in events] == [(winner, reviewer)]
+    row = fetch_resource(db_session_factory, rid)
+    assert row.review_status == ("published" if approved else "rejected")
+    assert row.index_status == ("queued" if approved else "not_indexed")
 
 
 def test_resource_permissions_for_roles(actors, course, client, storage_dir):

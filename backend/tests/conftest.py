@@ -8,6 +8,7 @@ from alembic import command
 from alembic.config import Config
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine, text
+from sqlalchemy.exc import OperationalError
 from sqlalchemy.orm import sessionmaker
 
 BACKEND_DIR = Path(__file__).resolve().parents[1]
@@ -43,16 +44,28 @@ def database_url() -> str:
 @pytest.fixture(scope="session")
 def migrated_engine(database_url: str):
     engine = create_engine(database_url, pool_pre_ping=True)
-    with engine.begin() as conn:
-        conn.execute(text("DROP SCHEMA IF EXISTS public CASCADE"))
-        conn.execute(text("CREATE SCHEMA public"))
+    try:
+        try:
+            connection = engine.connect()
+        except OperationalError:
+            # 驱动的原始回溯可能包含带密码的连接参数。
+            pytest.fail(f"无法连接测试数据库 {TEST_DB_NAME}，请检查服务、连接配置和凭据。", pytrace=False)
+        with connection, connection.begin():
+            connection.execute(text("DROP SCHEMA IF EXISTS public CASCADE"))
+            connection.execute(text("CREATE SCHEMA public"))
 
-    cfg = Config(str(BACKEND_DIR / "alembic.ini"))
-    cfg.set_main_option("script_location", str(BACKEND_DIR / "migrations"))
-    cfg.attributes["database_url"] = database_url
-    command.upgrade(cfg, "head")
-    yield engine
-    engine.dispose()
+        cfg = Config(str(BACKEND_DIR / "alembic.ini"))
+        cfg.set_main_option("script_location", str(BACKEND_DIR / "migrations"))
+        cfg.attributes["database_url"] = database_url
+        try:
+            command.upgrade(cfg, "head")
+        except OperationalError as exc:
+            if exc.connection_invalidated or exc.statement is None:
+                pytest.fail(f"迁移时无法连接测试数据库 {TEST_DB_NAME}。", pytrace=False)
+            raise
+        yield engine
+    finally:
+        engine.dispose()
 
 
 @pytest.fixture(autouse=True)

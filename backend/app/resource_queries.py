@@ -49,16 +49,25 @@ def latest_reject_reasons(db: Session, resource_ids: Iterable[uuid.UUID]) -> dic
     ids = list(resource_ids)
     if not ids:
         return {}
-    stmt = (
-        select(ResourceReview.resource_id, ResourceReview.action, ResourceReview.reason)
+    ranked = (
+        select(
+            ResourceReview.resource_id,
+            ResourceReview.action,
+            ResourceReview.reason,
+            func.row_number().over(
+                partition_by=ResourceReview.resource_id,
+                order_by=(ResourceReview.created_at.desc(), ResourceReview.id.desc()),
+            ).label("position"),
+        )
         .where(ResourceReview.resource_id.in_(ids))
-        .order_by(ResourceReview.resource_id, ResourceReview.created_at.desc(), ResourceReview.id.desc())
-        .distinct(ResourceReview.resource_id)
+        .subquery()
+    )
+    stmt = select(ranked.c.resource_id, ranked.c.reason).where(
+        ranked.c.position == 1, ranked.c.action == "reject"
     )
     return {
         rid: reason or ""
-        for rid, action, reason in db.execute(stmt).all()
-        if action == "reject"
+        for rid, reason in db.execute(stmt).all()
     }
 
 
