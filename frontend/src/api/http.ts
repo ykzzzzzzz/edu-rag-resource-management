@@ -15,7 +15,7 @@ export class ApiError extends Error {
   }
 }
 
-const API_PREFIX = '/api/v1'
+export const API_PREFIX = '/api/v1'
 
 function isApiErrorBody(value: unknown): value is ApiErrorBody {
   if (typeof value !== 'object' || value === null || !('error' in value)) {
@@ -41,7 +41,10 @@ async function toApiError(response: Response): Promise<ApiError> {
 export async function request<T>(method: 'GET' | 'POST' | 'PATCH', path: string, body?: unknown): Promise<T> {
   const headers: Record<string, string> = { Accept: 'application/json' }
   const init: RequestInit = { method, credentials: 'include', headers }
-  if (body !== undefined) {
+  if (body instanceof FormData) {
+    // multipart 上传：不手动设置 Content-Type，浏览器会自动带上 boundary。
+    init.body = body
+  } else if (body !== undefined) {
     headers['Content-Type'] = 'application/json'
     init.body = JSON.stringify(body)
   }

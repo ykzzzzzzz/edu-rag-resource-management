@@ -5,6 +5,17 @@ import { session } from '../stores/session'
 import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import PlaceholderView from '../views/PlaceholderView.vue'
+import AdminReviewsView from '../views/AdminReviewsView.vue'
+import MyResourcesView from '../views/MyResourcesView.vue'
+import ResourceDetailView from '../views/ResourceDetailView.vue'
+import ResourceListView from '../views/ResourceListView.vue'
+
+/** 已实现页面的组件；未列出的菜单入口仍使用占位页。 */
+const IMPLEMENTED_VIEWS: Record<string, RouteRecordRaw['component']> = {
+  '/resources': ResourceListView,
+  '/my-resources': MyResourcesView,
+  '/admin/reviews': AdminReviewsView,
+}
 
 const routes: RouteRecordRaw[] = [
   {
@@ -21,9 +32,11 @@ const routes: RouteRecordRaw[] = [
       ...NAV_ITEMS.map<RouteRecordRaw>((item) => ({
         path: item.path.slice(1),
         name: `nav:${item.path}`,
-        component: PlaceholderView,
+        component: IMPLEMENTED_VIEWS[item.path] ?? PlaceholderView,
         meta: { title: item.title, roles: item.roles },
       })),
+      // 详情页不在菜单中，所有登录角色可访问；可见性由服务端判断。
+      { path: 'resources/:id', name: 'resource-detail', component: ResourceDetailView, meta: { title: '资源详情' } },
     ],
   },
   { path: '/:pathMatch(.*)*', redirect: '/' },
