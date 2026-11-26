@@ -204,3 +204,52 @@ class ResourceChunk(Base):
     embedding: Mapped[list[float]] = mapped_column(Vector(512))
     embedding_model: Mapped[str] = mapped_column(String(200))
     chunk_config: Mapped[str] = mapped_column(String(100))
+
+
+QA_LOG_STATUSES = (
+    "answered",
+    "insufficient_evidence",
+    "llm_invalid_output",
+    "llm_auth_failed",
+    "llm_quota_exhausted",
+    "llm_rate_limited",
+    "llm_unavailable",
+    "llm_timeout",
+    "internal_error",
+)
+
+
+class QaLog(Base):
+    """匿名问答日志。不保存用户 ID，也不保存拼接后的完整提示词。"""
+
+    __tablename__ = "qa_logs"
+    __table_args__ = (
+        CheckConstraint(
+            "status IN (" + ", ".join(f"'{s}'" for s in QA_LOG_STATUSES) + ")",
+            name="ck_qa_logs_status",
+        ),
+        CheckConstraint("char_length(btrim(question)) > 0", name="ck_qa_logs_question_not_blank"),
+        CheckConstraint("jsonb_typeof(retrieved) = 'array'", name="ck_qa_logs_retrieved_array"),
+        CheckConstraint("jsonb_typeof(cited_chunk_ids) = 'array'", name="ck_qa_logs_cited_chunk_ids_array"),
+        CheckConstraint("jsonb_typeof(timings) = 'object'", name="ck_qa_logs_timings_object"),
+        CheckConstraint("jsonb_typeof(model_config) = 'object'", name="ck_qa_logs_model_config_object"),
+        Index("ix_qa_logs_created_at", "created_at"),
+    )
+
+    id: Mapped[uuid.UUID] = mapped_column(
+        Uuid, primary_key=True, default=uuid.uuid4, server_default=text("gen_random_uuid()")
+    )
+    course_id: Mapped[uuid.UUID | None] = mapped_column(
+        Uuid, ForeignKey("courses.id", ondelete="SET NULL", name="fk_qa_logs_course_id_courses"), nullable=True
+    )
+    question: Mapped[str] = mapped_column(String(500))
+    status: Mapped[str] = mapped_column(String(32))
+    answer: Mapped[str | None] = mapped_column(Text, nullable=True)
+    # [{"chunk_id", "resource_id", "rank", "similarity"}]，按排名升序
+    retrieved: Mapped[list] = mapped_column(JSONB, default=list, server_default=text("'[]'::jsonb"))
+    cited_chunk_ids: Mapped[list] = mapped_column(JSONB, default=list, server_default=text("'[]'::jsonb"))
+    # {"retrieval_ms", "generation_ms", "total_ms"}
+    timings: Mapped[dict] = mapped_column(JSONB, default=dict, server_default=text("'{}'::jsonb"))
+    # 列名与计划一致；属性名避开 Pydantic 的保留名
+    llm_config: Mapped[dict] = mapped_column("model_config", JSONB, default=dict, server_default=text("'{}'::jsonb"))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())

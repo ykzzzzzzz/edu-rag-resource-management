@@ -14,6 +14,7 @@ from sqlalchemy.orm import sessionmaker
 
 from app.config import Settings, get_settings
 from app.db import make_engine
+from app.embeddings import EmbeddingModelError, chunk_config_id, embedding_model_id, load_sentence_transformer
 from app.index_documents import Fragment, IndexingError, split_document
 from app.models import Resource, ResourceChunk
 from app.uploads import stored_path
@@ -82,8 +83,8 @@ def finish(session_factory, settings, attempt: Attempt, records, error: str | No
             _clear_attempt(resource, "failed", error)
             return False
 
-        model = f"{settings.embedding_model}@{settings.embedding_revision}"
-        config = f"v1:{settings.chunk_size}:{settings.chunk_overlap}"
+        model = embedding_model_id(settings)
+        config = chunk_config_id(settings)
         db.execute(delete(ResourceChunk).where(
             ResourceChunk.resource_id == resource.id,
             ResourceChunk.embedding_model == model,
@@ -103,19 +104,10 @@ def finish(session_factory, settings, attempt: Attempt, records, error: str | No
 
 
 def _model(settings):
-    from sentence_transformers import SentenceTransformer
-
-    cache = str(settings.hf_home / "hub") if settings.hf_home else None
     try:
-        model = SentenceTransformer(settings.embedding_model, revision=settings.embedding_revision,
-                                    cache_folder=cache, device="cpu", local_files_only=True)
-        if not model.tokenizer.is_fast or model.get_embedding_dimension() != 512:
-            raise IndexingError("嵌入模型必须提供快速分词器和 512 维向量")
-        return model
-    except IndexingError:
-        raise
-    except Exception:
-        raise IndexingError("无法加载本地嵌入模型，请检查缓存目录和版本") from None
+        return load_sentence_transformer(settings)
+    except EmbeddingModelError as exc:
+        raise IndexingError(str(exc)) from None
 
 
 def _process_documents(connection, options):
@@ -150,7 +142,7 @@ class DocumentProcessor:
     """Keep one model warm in a child process that can be stopped on timeout."""
 
     def __init__(self, settings: Settings):
-        self.options = settings.model_dump(exclude={"database_url"})
+        self.options = settings.model_dump(exclude={"database_url", "llm_api_key"})
         self.context = multiprocessing.get_context("spawn")
         self.connection = None
         self.process = None

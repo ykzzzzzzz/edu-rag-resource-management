@@ -2,7 +2,7 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Literal
 
-from pydantic import Field
+from pydantic import Field, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -32,6 +32,17 @@ class Settings(BaseSettings):
     index_poll_seconds: float = Field(default=2, gt=0)
     max_pdf_pages: int = Field(default=200, ge=1)
     max_docx_unpacked_bytes: int = Field(default=64 * 1024 * 1024, ge=1)
+    # 问答与检索。相似度门槛是 M4 的临时默认值，M5 用验证集调参后再确定
+    embedding_query_instruction: str = Field(default="为这个句子生成表示以用于检索相关文章：", max_length=100)
+    retrieval_top_k: int = Field(default=5, ge=1, le=20)
+    retrieval_min_similarity: float = Field(default=0.40, ge=-1, le=1)
+    qa_rate_limit_per_minute: int = Field(default=10, ge=1)
+    # 云端生成。API 密钥用 SecretStr 保存，不进入日志、错误信息和索引子进程
+    llm_provider: Literal["bailian", "deepseek"] = "bailian"
+    llm_base_url: str = ""
+    llm_api_key: SecretStr = SecretStr("")
+    llm_model: str = ""
+    llm_timeout_seconds: float = Field(default=45, gt=0, le=600)
 
     @property
     def allowed_origins(self) -> list[str]:

@@ -72,7 +72,7 @@ def migrated_engine(database_url: str):
 def clean_tables(migrated_engine):
     """每个用例前清空业务表，保证用例之间相互隔离。"""
     with migrated_engine.begin() as conn:
-        conn.execute(text("TRUNCATE resource_reviews, resources, sessions, users, courses CASCADE"))
+        conn.execute(text("TRUNCATE qa_logs, resource_reviews, resources, sessions, users, courses CASCADE"))
     yield
 
 
@@ -92,13 +92,33 @@ def storage_dir(tmp_path):
 @pytest.fixture
 def app(database_url: str, monkeypatch, storage_dir):
     from app.config import Settings
+    from app.embeddings import StaticEmbedderProvider
     from app.main import create_app
+    from tests.qa_helpers import FakeEmbedder, NoNetwork
 
     monkeypatch.setenv("DATABASE_URL", database_url)
     monkeypatch.setenv("RESOURCE_STORAGE_DIR", str(storage_dir))
     monkeypatch.setenv("QA_MODE", "demo")
     monkeypatch.setenv("FRONTEND_ORIGIN", f"{FRONTEND_ORIGIN},http://127.0.0.1:5173")
-    application = create_app(Settings())
+    # 问答相关配置全部由环境变量固定，避免本机 .env 里的真实密钥或调参结果影响测试
+    for name, value in {
+        "EMBEDDING_QUERY_INSTRUCTION": "查询：",
+        "RETRIEVAL_TOP_K": "5",
+        "RETRIEVAL_MIN_SIMILARITY": "0.4",
+        "QA_RATE_LIMIT_PER_MINUTE": "1000",
+        "LLM_PROVIDER": "bailian",
+        "LLM_BASE_URL": "",
+        "LLM_API_KEY": "",
+        "LLM_MODEL": "",
+        "LLM_TIMEOUT_SECONDS": "5",
+    }.items():
+        monkeypatch.setenv(name, value)
+    # 测试不加载真实嵌入模型，也不允许任何外部 HTTP 请求（用例需要时自行替换 app.state.llm_transport）
+    application = create_app(
+        Settings(),
+        embedder_provider=StaticEmbedderProvider(FakeEmbedder()),
+        llm_transport=NoNetwork(),
+    )
     yield application
     application.state.engine.dispose()
 

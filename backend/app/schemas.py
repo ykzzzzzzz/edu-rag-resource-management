@@ -2,7 +2,7 @@ import uuid
 from datetime import datetime
 from typing import Annotated, Literal
 
-from pydantic import AfterValidator, BaseModel, ConfigDict, StringConstraints, model_validator
+from pydantic import AfterValidator, BaseModel, ConfigDict, Field, StringConstraints, model_validator
 
 Role = Literal["student", "teacher", "admin"]
 Username = Annotated[
@@ -187,6 +187,123 @@ class ResourceOut(BaseModel):
 
 class ResourceListOut(BaseModel):
     items: list[ResourceOut]
+    total: int
+    page: int
+    page_size: int
+
+
+# ---- 问答、出处、统计与日志 ----
+
+QaLogStatus = Literal[
+    "answered",
+    "insufficient_evidence",
+    "llm_invalid_output",
+    "llm_auth_failed",
+    "llm_quota_exhausted",
+    "llm_rate_limited",
+    "llm_unavailable",
+    "llm_timeout",
+    "internal_error",
+]
+Question = Annotated[
+    str, StringConstraints(strip_whitespace=True, min_length=1, max_length=500), AfterValidator(_no_nul)
+]
+
+
+class AskIn(StrictModel):
+    question: Question
+    course_id: uuid.UUID | None = None
+
+
+class LocatorOut(BaseModel):
+    type: Literal["pdf_page", "docx_paragraph", "txt_line"]
+    start: int
+    end: int
+
+
+class CitationOut(BaseModel):
+    number: int
+    resource_id: uuid.UUID
+    chunk_id: uuid.UUID
+    title: str
+    course_name: str
+    locator: LocatorOut
+    excerpt: str
+
+
+class AskOut(BaseModel):
+    status: Literal["answered", "insufficient_evidence"]
+    mode: Literal["demo", "cloud"]
+    answer: str
+    citations: list[CitationOut]
+
+
+class CitationDetailOut(BaseModel):
+    resource_id: uuid.UUID
+    chunk_id: uuid.UUID
+    title: str
+    course_name: str
+    original_filename: str
+    locator: LocatorOut
+    content: str
+
+
+class CourseStatOut(BaseModel):
+    course_id: uuid.UUID
+    course_name: str
+    published_resources: int
+
+
+class DailyQaOut(BaseModel):
+    date: str
+    total: int
+    insufficient_evidence: int
+
+
+class StatsOut(BaseModel):
+    days: int
+    courses: list[CourseStatOut]
+    review_status: dict[ReviewStatus, int]
+    index_status: dict[IndexStatus, int]
+    daily_qa: list[DailyQaOut]
+    qa_total: int
+    insufficient_evidence_total: int
+    insufficient_evidence_ratio: float
+
+
+class QaLogRetrievedOut(BaseModel):
+    chunk_id: str
+    resource_id: str
+    rank: int
+    similarity: float
+
+
+class QaLogTimingsOut(BaseModel):
+    retrieval_ms: float | None = None
+    generation_ms: float | None = None
+    total_ms: float | None = None
+
+
+class QaLogOut(BaseModel):
+    """对外字段名为 model_config（与计划一致）；属性名 llm_config 避开 Pydantic 的保留名。"""
+
+    model_config = ConfigDict(populate_by_name=True)
+
+    id: uuid.UUID
+    created_at: datetime
+    course_id: uuid.UUID | None
+    course_name: str | None
+    question: str
+    status: QaLogStatus
+    answer: str | None
+    retrieved: list[QaLogRetrievedOut]
+    cited_chunk_ids: list[str]
+    timings: QaLogTimingsOut
+    llm_config: dict = Field(alias="model_config")
+
+
+class QaLogListOut(BaseModel):
+    items: list[QaLogOut]
     total: int
     page: int
     page_size: int
