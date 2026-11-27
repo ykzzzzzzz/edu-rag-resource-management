@@ -20,7 +20,7 @@ sys.path.insert(0, str(BACKEND_DIR))
 from sqlalchemy import func, select  # noqa: E402
 from sqlalchemy.orm import sessionmaker  # noqa: E402
 
-from app.config import get_settings  # noqa: E402
+from app.config import Settings, get_settings  # noqa: E402
 from app.db import make_engine  # noqa: E402
 from app.models import Course, User  # noqa: E402
 from app.security import hash_password  # noqa: E402
@@ -40,8 +40,8 @@ SAMPLE_COURSES = [
 CREDENTIALS_FILE = REPO_ROOT / "data" / "local" / "demo-accounts.txt"
 
 
-def seed() -> None:
-    settings = get_settings()
+def seed(settings: Settings | None = None, *, credentials_file: Path = CREDENTIALS_FILE) -> None:
+    settings = settings or get_settings()
     engine = make_engine(settings.database_url)
     Session = sessionmaker(bind=engine, expire_on_commit=False)
 
@@ -81,15 +81,15 @@ def seed() -> None:
         db.commit()
 
     if created_accounts:
-        CREDENTIALS_FILE.parent.mkdir(parents=True, exist_ok=True)
+        credentials_file.parent.mkdir(parents=True, exist_ok=True)
         lines = [f"{username}\t{role}\t{password}" for username, role, password in created_accounts]
-        with CREDENTIALS_FILE.open("a", encoding="utf-8") as fh:
+        with credentials_file.open("a", encoding="utf-8") as fh:
             fh.write("\n".join(lines) + "\n")
 
     engine.dispose()
     print(f"账号：新建 {len(created_accounts)}，已存在跳过 {skipped_accounts}")
     if created_accounts:
-        print(f"演示密码已写入 {CREDENTIALS_FILE.relative_to(REPO_ROOT)}（Git 忽略）")
+        print(f"演示密码已写入 {credentials_file.relative_to(REPO_ROOT)}（Git 忽略）")
     print(f"课程：新建 {created_courses}，已存在跳过 {skipped_courses}")
 
 

@@ -1,10 +1,10 @@
 # 交接文档（新对话先读）
 
-最后更新：2026-11-26。写给接手的 Claude 或 Codex。详细验证记录见 `docs/progress-claude.md` 和 `docs/progress-codex.md`。
+最后更新于 2026-11-27。写给接手的 Claude 或 Codex。详细验证记录见 `docs/progress-claude.md` 和 `docs/progress-codex.md`。
 
 ## 一句话现状
 
-M1–M4 已完成并推送到 GitHub `main`，管理员的用户管理、课程管理页面也已补齐（2026-11-27）。系统能完整运行：账号与课程管理、上传、审核、发布、下架、索引、课程内检索、演示摘录问答、云端生成问答、引用抽屉、问答日志和统计页。**下一步是 M5 论文实验的入库和出题**：24 份实验资料已生成并转成真实文件（`data/samples/materials/`），待清理联调数据后通过系统上传入库。
+M1–M4 已完成，用户管理和课程管理页面均已补齐。M5 的 24 份正式资料已通过系统接口导入独立实验库并建好索引，24 道验证题有了草稿。下一步是复核验证题、编制 60 道测试题并实现调参与论文实验脚本。
 
 ## 里程碑
 
@@ -14,7 +14,7 @@ M1–M4 已完成并推送到 GitHub `main`，管理员的用户管理、课程�
 | M2 | 上传、审核、驳回、下架、下载，三角色权限 | 完成，浏览器三账号联调 |
 | M3 | PDF/DOCX/TXT 解析、切块、嵌入、索引进程 | 完成，真实模型离线验证 |
 | M4 | 检索、演示/云端问答、引用、日志、统计、限流 | 完成，演示和云端模式都联调 |
-| M5 | 资料与题集、调参、对照实验、消融、人工评分 | **未开始，等资料** |
+| M5 | 资料与题集、调参、对照实验、消融、人工评分 | 24 份资料已入库并索引，24 道验证题待复核，测试集与实验脚本待做 |
 | M6 | 本地演示准备、README、答辩录屏 | 未开始 |
 
 测试基线（2026-11-26）：后端 pytest 255 项通过，scripts unittest 60 项通过，前端 `npm run build` 通过。
@@ -83,7 +83,7 @@ powershell -File .\scripts\start-all.ps1 -WithIndexer
 
 2026-11-27 联调用户管理和课程管理页面时，新增了两条联调遗留：**账号 `tmp.teacher02`（已停用）**和**课程"联调临时课程"**，实验入库前要一起清理。真实的演示账号只有 `admin`、`teacher01`、`student01`，课程只有"数据库原理""计算机网络""Python 程序设计"。
 
-M5 正式实验前，建议征得用户同意后清理这些联调数据，或者另建一个实验库。
+M5 使用独立实验库 `scf_experiment` 和专用数据库角色 `scf_experiment_app`。2026-11-27 本机验收时，开发库仍有 5 份资料、20 条问答日志、4 个账号和 4 门课程。实验库有 24 份正式资料、147 个 512 维片段，问答日志 0 条。
 
 ## 代码地图
 
@@ -99,21 +99,37 @@ M5 正式实验前，建议征得用户同意后清理这些联调数据，或�
 | `backend/migrations/versions/` | 0001 用户课程会话，0002 资源与审核，0003 切块，0004 问答日志 |
 | `frontend/src/views/` | 登录、资源浏览与详情、我的资源、审核管理、问答、问答日志、统计、用户管理、课程管理 |
 | `scripts/build_materials.py` | 把 `evaluation/course-materials.txt` 转成 `data/samples/materials/` 下的 PDF/DOCX/TXT，并生成清单和关键事实定位 |
+| `scripts/setup_experiment.py` | 初始化独立实验库、启动本机实验 API、运行真实离线索引 |
+| `scripts/import_experiment_materials.py` | 通过教师上传、管理员审核导入清单，核对原件并保存资料编号到资源 ID 的映射 |
 | `scripts/spike_llm.py` | M1 模型验证脚本，带 `--prompt-version`、`--interval` |
 | `scripts/seed.py` | 幂等创建演示账号和课程 |
 | `evaluation/spike/` | M1 题集、补充题和试跑结果 |
 
 ## M5 下一步
 
-状态（2026-11-27）：第 1、2 步已完成，第 3 步（入库）待做。
+状态（2026-11-27）：正式资料已生成、入库并完成索引。验证题草稿已建立。
 
 1. ~~**等资料。**~~ **已完成。** 24 份资料由 AI 生成，保存在 `evaluation/course-materials.txt`，已通过格式和事实检查（250 条关键事实原句都能在正文中找到）。来源写为"由 AI 辅助生成的虚构教学资料"，授权为"自编虚构内容，可公开分发"。论文里写具体是哪个 AI 时，请向用户确认（资料实际由 Codex 写成）。
 2. ~~**转换资料。**~~ **已完成。** `python -I scripts/build_materials.py` 生成 `data/samples/materials/{DB,NET,PY}/` 下 24 个真实文件（9 份 PDF、9 份 DOCX、6 份 TXT），以及 `manifest.json`（含 sha256、来源、授权）和 `key_facts.jsonl`（250 条金标准定位，直接用后端的 `extract_units` 计算）。PDF 用 reportlab 生成并嵌入宋体，依赖在 `scripts/requirements-materials.txt`，不在后端依赖里。已验证：24 个文件都通过后端 `validate_content`，脚本测试 98 项通过，重复运行产物逐字节一致。已知：9 份 PDF 共有 13 行以标点开头（CJK 换行没有避头标点），不影响解析。
-3. **入库。** 通过正式接口用 `teacher01` 上传、`admin` 审核，运行索引进程，确认全部 `ready`。**入库前要先清理开发库里的联调数据**（见"开发库现有数据"），清理前问用户。记录稳定编号（如 `DB-01`）到数据库资源 ID 的映射。
-4. **出题。** 起草验证集 24 题（18 可答、6 无答案）和测试集 60 题（45 可答、15 无答案）。可答题标注知识类型（`general` / `institutional`）和难度（`direct` / `paraphrase_multi`），金标准位置标到页或段。由用户审核定稿，定稿后不再改。
+3. **入库已完成。** 24 份资料经教师上传、送审、管理员审核、真实离线索引后全部 `ready`。重跑导入后资源编号映射和审核记录均未重复。映射位于 `data/local/experiment/resource_map.json`，独立库和上传目录的复现命令见下方。
+4. **出题。** `evaluation/validation.jsonl` 已有 24 题草稿（18 可答、6 无答案），27 处金标准位置均有入库片段覆盖。请复核后冻结验证集，另编独立的 60 道测试题（45 可答、15 无答案）。可答题标注知识类型（`general` / `institutional`）和难度（`direct` / `paraphrase_multi`），金标准位置标到页、段或行。
 5. **写实验脚本。** `scripts/run_evaluation.py`（`baseline` / `rag` 两种模式，可覆盖 Top-K、门槛、切块配置）、`scripts/blind_sheet.py`（盲评表）、`scripts/reindex.py`（切块长度消融）。指标定义见 `DEVELOPMENT_PLAN.md` 第 9.3 节。
 6. **评分规则** `evaluation/rubric.md`，评分开始前定稿。第二评分人由用户找同学担任，独立评 20 题。
 7. 云端实验费用估算在 ¥0.05 以内，运行前告诉用户。
+
+### 复现实验入库
+
+从仓库根目录运行。`init` 使用本机管理员创建实验库、启用扩展，然后以独立角色执行迁移并创建演示账号。另开 PowerShell 运行 `serve`，服务监听 `127.0.0.1:8015` 和演示模式。凭据、文件与映射均保存在 Git 忽略的 `data/local/experiment/`。
+
+```powershell
+$scfPython = 'E:\scf-env\venv\Scripts\python.exe'
+& $scfPython -I scripts/setup_experiment.py init
+# 在第二个终端定义同一个 $scfPython 后启动实验 API
+& $scfPython -I scripts/setup_experiment.py serve
+# 回到第一个终端，通过正式接口导入并索引
+& $scfPython -I scripts/import_experiment_materials.py --base-url http://127.0.0.1:8015 --origin http://127.0.0.1:8015 --accounts-file data/local/experiment/demo-accounts.txt --out data/local/experiment/resource_map.json
+& $scfPython -I scripts/setup_experiment.py index
+```
 
 ## 已知问题与待办
 
@@ -133,7 +149,7 @@ M5 正式实验前，建议征得用户同意后清理这些联调数据，或�
 
 | 顺序 | 事项 | 说明 |
 | --- | --- | --- |
-| 1 | M5 实验资料入库与题集 | 当前进行中。资料文件 `evaluation/course-materials.txt`（24 份）已通过格式检查，待转成真实文件并入库 |
+| 1 | M5 实验资料入库与题集 | 24 份正式资料已索引；验证题草稿待复核，测试集待编制 |
 | 2 | ~~补全缺失的管理页面~~ **已完成（2026-11-27）** | 用户管理、课程管理两个页面已做并在浏览器联调通过。重名 409、停用自己、降级最后一个管理员、重置密码、停用后会话立即失效都验证过。用户列表在前端切片分页（后端无分页参数） |
 | 3 | 补充功能（候选，待用户挑选） | 计划里的 P1：个人问答历史、关键词与语义混合检索、重排。另可考虑：资源详情页的"相关问答"、批量审核、问答结果反馈（有用/没用）、资源版本说明。这些要先和用户确认再做，避免超出论文范围 |
 | 4 | M5 实验与 M6 演示准备 | 调参、对照实验、消融、README、答辩录屏 |
