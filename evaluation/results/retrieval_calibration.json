@@ -1,0 +1,3221 @@
+{
+  "dataset": "evaluation/validation.jsonl",
+  "dataset_sha256": "8bfe06513b1448b442277ba020f933571eb24f19b318b23da87a322faace0b3c",
+  "resource_map_sha256": "59d05c8d0ef5fdca6e04446157b013ced1ba73d8e25be5a52f110b95ee028852",
+  "resource_count": 24,
+  "chunk_count": 147,
+  "embedding_model": "BAAI/bge-small-zh-v1.5@7999e1d3359715c523056ef9478215996d62a620",
+  "embedding_query_instruction": "为这个句子生成表示以用于检索相关文章：",
+  "chunk_config": "v1:350:50",
+  "selection_rule": "Maximize the mean of gated Hit@K and unanswerable evidence refusal rate. Break ties by higher gated Hit@K, higher gated MRR, smaller K, then lower threshold.",
+  "selected": {
+    "top_k": 3,
+    "min_similarity": 0.65,
+    "answerable": 18,
+    "unanswerable": 6,
+    "raw_hit_count": 16,
+    "raw_hit_at_k": 0.8888888888888888,
+    "raw_mrr": 0.8240740740740741,
+    "hit_count": 11,
+    "hit_at_k": 0.6111111111111112,
+    "mrr": 0.5833333333333334,
+    "unanswerable_evidence_refusal_count": 5,
+    "unanswerable_evidence_refusal_rate": 0.8333333333333334,
+    "false_evidence_refusal_count": 6,
+    "false_evidence_refusal_rate": 0.3333333333333333,
+    "selection_score": 0.7222222222222222
+  },
+  "comparisons": [
+    {
+      "top_k": 3,
+      "min_similarity": 0.4,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 16,
+      "raw_hit_at_k": 0.8888888888888888,
+      "raw_mrr": 0.8240740740740741,
+      "hit_count": 16,
+      "hit_at_k": 0.8888888888888888,
+      "mrr": 0.8240740740740741,
+      "unanswerable_evidence_refusal_count": 0,
+      "unanswerable_evidence_refusal_rate": 0.0,
+      "false_evidence_refusal_count": 0,
+      "false_evidence_refusal_rate": 0.0,
+      "selection_score": 0.4444444444444444
+    },
+    {
+      "top_k": 3,
+      "min_similarity": 0.45,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 16,
+      "raw_hit_at_k": 0.8888888888888888,
+      "raw_mrr": 0.8240740740740741,
+      "hit_count": 16,
+      "hit_at_k": 0.8888888888888888,
+      "mrr": 0.8240740740740741,
+      "unanswerable_evidence_refusal_count": 0,
+      "unanswerable_evidence_refusal_rate": 0.0,
+      "false_evidence_refusal_count": 0,
+      "false_evidence_refusal_rate": 0.0,
+      "selection_score": 0.4444444444444444
+    },
+    {
+      "top_k": 3,
+      "min_similarity": 0.5,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 16,
+      "raw_hit_at_k": 0.8888888888888888,
+      "raw_mrr": 0.8240740740740741,
+      "hit_count": 16,
+      "hit_at_k": 0.8888888888888888,
+      "mrr": 0.8240740740740741,
+      "unanswerable_evidence_refusal_count": 0,
+      "unanswerable_evidence_refusal_rate": 0.0,
+      "false_evidence_refusal_count": 0,
+      "false_evidence_refusal_rate": 0.0,
+      "selection_score": 0.4444444444444444
+    },
+    {
+      "top_k": 3,
+      "min_similarity": 0.55,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 16,
+      "raw_hit_at_k": 0.8888888888888888,
+      "raw_mrr": 0.8240740740740741,
+      "hit_count": 16,
+      "hit_at_k": 0.8888888888888888,
+      "mrr": 0.8240740740740741,
+      "unanswerable_evidence_refusal_count": 0,
+      "unanswerable_evidence_refusal_rate": 0.0,
+      "false_evidence_refusal_count": 1,
+      "false_evidence_refusal_rate": 0.05555555555555555,
+      "selection_score": 0.4444444444444444
+    },
+    {
+      "top_k": 3,
+      "min_similarity": 0.6,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 16,
+      "raw_hit_at_k": 0.8888888888888888,
+      "raw_mrr": 0.8240740740740741,
+      "hit_count": 16,
+      "hit_at_k": 0.8888888888888888,
+      "mrr": 0.8240740740740741,
+      "unanswerable_evidence_refusal_count": 1,
+      "unanswerable_evidence_refusal_rate": 0.16666666666666666,
+      "false_evidence_refusal_count": 2,
+      "false_evidence_refusal_rate": 0.1111111111111111,
+      "selection_score": 0.5277777777777778
+    },
+    {
+      "top_k": 3,
+      "min_similarity": 0.65,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 16,
+      "raw_hit_at_k": 0.8888888888888888,
+      "raw_mrr": 0.8240740740740741,
+      "hit_count": 11,
+      "hit_at_k": 0.6111111111111112,
+      "mrr": 0.5833333333333334,
+      "unanswerable_evidence_refusal_count": 5,
+      "unanswerable_evidence_refusal_rate": 0.8333333333333334,
+      "false_evidence_refusal_count": 6,
+      "false_evidence_refusal_rate": 0.3333333333333333,
+      "selection_score": 0.7222222222222222
+    },
+    {
+      "top_k": 3,
+      "min_similarity": 0.7,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 16,
+      "raw_hit_at_k": 0.8888888888888888,
+      "raw_mrr": 0.8240740740740741,
+      "hit_count": 7,
+      "hit_at_k": 0.3888888888888889,
+      "mrr": 0.3611111111111111,
+      "unanswerable_evidence_refusal_count": 6,
+      "unanswerable_evidence_refusal_rate": 1.0,
+      "false_evidence_refusal_count": 11,
+      "false_evidence_refusal_rate": 0.6111111111111112,
+      "selection_score": 0.6944444444444444
+    },
+    {
+      "top_k": 3,
+      "min_similarity": 0.75,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 16,
+      "raw_hit_at_k": 0.8888888888888888,
+      "raw_mrr": 0.8240740740740741,
+      "hit_count": 2,
+      "hit_at_k": 0.1111111111111111,
+      "mrr": 0.1111111111111111,
+      "unanswerable_evidence_refusal_count": 6,
+      "unanswerable_evidence_refusal_rate": 1.0,
+      "false_evidence_refusal_count": 16,
+      "false_evidence_refusal_rate": 0.8888888888888888,
+      "selection_score": 0.5555555555555556
+    },
+    {
+      "top_k": 3,
+      "min_similarity": 0.8,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 16,
+      "raw_hit_at_k": 0.8888888888888888,
+      "raw_mrr": 0.8240740740740741,
+      "hit_count": 0,
+      "hit_at_k": 0.0,
+      "mrr": 0.0,
+      "unanswerable_evidence_refusal_count": 6,
+      "unanswerable_evidence_refusal_rate": 1.0,
+      "false_evidence_refusal_count": 18,
+      "false_evidence_refusal_rate": 1.0,
+      "selection_score": 0.5
+    },
+    {
+      "top_k": 5,
+      "min_similarity": 0.4,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 18,
+      "raw_hit_at_k": 1.0,
+      "raw_mrr": 0.8490740740740741,
+      "hit_count": 18,
+      "hit_at_k": 1.0,
+      "mrr": 0.8490740740740741,
+      "unanswerable_evidence_refusal_count": 0,
+      "unanswerable_evidence_refusal_rate": 0.0,
+      "false_evidence_refusal_count": 0,
+      "false_evidence_refusal_rate": 0.0,
+      "selection_score": 0.5
+    },
+    {
+      "top_k": 5,
+      "min_similarity": 0.45,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 18,
+      "raw_hit_at_k": 1.0,
+      "raw_mrr": 0.8490740740740741,
+      "hit_count": 17,
+      "hit_at_k": 0.9444444444444444,
+      "mrr": 0.837962962962963,
+      "unanswerable_evidence_refusal_count": 0,
+      "unanswerable_evidence_refusal_rate": 0.0,
+      "false_evidence_refusal_count": 0,
+      "false_evidence_refusal_rate": 0.0,
+      "selection_score": 0.4722222222222222
+    },
+    {
+      "top_k": 5,
+      "min_similarity": 0.5,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 18,
+      "raw_hit_at_k": 1.0,
+      "raw_mrr": 0.8490740740740741,
+      "hit_count": 17,
+      "hit_at_k": 0.9444444444444444,
+      "mrr": 0.837962962962963,
+      "unanswerable_evidence_refusal_count": 0,
+      "unanswerable_evidence_refusal_rate": 0.0,
+      "false_evidence_refusal_count": 0,
+      "false_evidence_refusal_rate": 0.0,
+      "selection_score": 0.4722222222222222
+    },
+    {
+      "top_k": 5,
+      "min_similarity": 0.55,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 18,
+      "raw_hit_at_k": 1.0,
+      "raw_mrr": 0.8490740740740741,
+      "hit_count": 16,
+      "hit_at_k": 0.8888888888888888,
+      "mrr": 0.8240740740740741,
+      "unanswerable_evidence_refusal_count": 0,
+      "unanswerable_evidence_refusal_rate": 0.0,
+      "false_evidence_refusal_count": 1,
+      "false_evidence_refusal_rate": 0.05555555555555555,
+      "selection_score": 0.4444444444444444
+    },
+    {
+      "top_k": 5,
+      "min_similarity": 0.6,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 18,
+      "raw_hit_at_k": 1.0,
+      "raw_mrr": 0.8490740740740741,
+      "hit_count": 16,
+      "hit_at_k": 0.8888888888888888,
+      "mrr": 0.8240740740740741,
+      "unanswerable_evidence_refusal_count": 1,
+      "unanswerable_evidence_refusal_rate": 0.16666666666666666,
+      "false_evidence_refusal_count": 2,
+      "false_evidence_refusal_rate": 0.1111111111111111,
+      "selection_score": 0.5277777777777778
+    },
+    {
+      "top_k": 5,
+      "min_similarity": 0.65,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 18,
+      "raw_hit_at_k": 1.0,
+      "raw_mrr": 0.8490740740740741,
+      "hit_count": 11,
+      "hit_at_k": 0.6111111111111112,
+      "mrr": 0.5833333333333334,
+      "unanswerable_evidence_refusal_count": 5,
+      "unanswerable_evidence_refusal_rate": 0.8333333333333334,
+      "false_evidence_refusal_count": 6,
+      "false_evidence_refusal_rate": 0.3333333333333333,
+      "selection_score": 0.7222222222222222
+    },
+    {
+      "top_k": 5,
+      "min_similarity": 0.7,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 18,
+      "raw_hit_at_k": 1.0,
+      "raw_mrr": 0.8490740740740741,
+      "hit_count": 7,
+      "hit_at_k": 0.3888888888888889,
+      "mrr": 0.3611111111111111,
+      "unanswerable_evidence_refusal_count": 6,
+      "unanswerable_evidence_refusal_rate": 1.0,
+      "false_evidence_refusal_count": 11,
+      "false_evidence_refusal_rate": 0.6111111111111112,
+      "selection_score": 0.6944444444444444
+    },
+    {
+      "top_k": 5,
+      "min_similarity": 0.75,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 18,
+      "raw_hit_at_k": 1.0,
+      "raw_mrr": 0.8490740740740741,
+      "hit_count": 2,
+      "hit_at_k": 0.1111111111111111,
+      "mrr": 0.1111111111111111,
+      "unanswerable_evidence_refusal_count": 6,
+      "unanswerable_evidence_refusal_rate": 1.0,
+      "false_evidence_refusal_count": 16,
+      "false_evidence_refusal_rate": 0.8888888888888888,
+      "selection_score": 0.5555555555555556
+    },
+    {
+      "top_k": 5,
+      "min_similarity": 0.8,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 18,
+      "raw_hit_at_k": 1.0,
+      "raw_mrr": 0.8490740740740741,
+      "hit_count": 0,
+      "hit_at_k": 0.0,
+      "mrr": 0.0,
+      "unanswerable_evidence_refusal_count": 6,
+      "unanswerable_evidence_refusal_rate": 1.0,
+      "false_evidence_refusal_count": 18,
+      "false_evidence_refusal_rate": 1.0,
+      "selection_score": 0.5
+    },
+    {
+      "top_k": 8,
+      "min_similarity": 0.4,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 18,
+      "raw_hit_at_k": 1.0,
+      "raw_mrr": 0.8490740740740741,
+      "hit_count": 18,
+      "hit_at_k": 1.0,
+      "mrr": 0.8490740740740741,
+      "unanswerable_evidence_refusal_count": 0,
+      "unanswerable_evidence_refusal_rate": 0.0,
+      "false_evidence_refusal_count": 0,
+      "false_evidence_refusal_rate": 0.0,
+      "selection_score": 0.5
+    },
+    {
+      "top_k": 8,
+      "min_similarity": 0.45,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 18,
+      "raw_hit_at_k": 1.0,
+      "raw_mrr": 0.8490740740740741,
+      "hit_count": 17,
+      "hit_at_k": 0.9444444444444444,
+      "mrr": 0.837962962962963,
+      "unanswerable_evidence_refusal_count": 0,
+      "unanswerable_evidence_refusal_rate": 0.0,
+      "false_evidence_refusal_count": 0,
+      "false_evidence_refusal_rate": 0.0,
+      "selection_score": 0.4722222222222222
+    },
+    {
+      "top_k": 8,
+      "min_similarity": 0.5,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 18,
+      "raw_hit_at_k": 1.0,
+      "raw_mrr": 0.8490740740740741,
+      "hit_count": 17,
+      "hit_at_k": 0.9444444444444444,
+      "mrr": 0.837962962962963,
+      "unanswerable_evidence_refusal_count": 0,
+      "unanswerable_evidence_refusal_rate": 0.0,
+      "false_evidence_refusal_count": 0,
+      "false_evidence_refusal_rate": 0.0,
+      "selection_score": 0.4722222222222222
+    },
+    {
+      "top_k": 8,
+      "min_similarity": 0.55,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 18,
+      "raw_hit_at_k": 1.0,
+      "raw_mrr": 0.8490740740740741,
+      "hit_count": 16,
+      "hit_at_k": 0.8888888888888888,
+      "mrr": 0.8240740740740741,
+      "unanswerable_evidence_refusal_count": 0,
+      "unanswerable_evidence_refusal_rate": 0.0,
+      "false_evidence_refusal_count": 1,
+      "false_evidence_refusal_rate": 0.05555555555555555,
+      "selection_score": 0.4444444444444444
+    },
+    {
+      "top_k": 8,
+      "min_similarity": 0.6,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 18,
+      "raw_hit_at_k": 1.0,
+      "raw_mrr": 0.8490740740740741,
+      "hit_count": 16,
+      "hit_at_k": 0.8888888888888888,
+      "mrr": 0.8240740740740741,
+      "unanswerable_evidence_refusal_count": 1,
+      "unanswerable_evidence_refusal_rate": 0.16666666666666666,
+      "false_evidence_refusal_count": 2,
+      "false_evidence_refusal_rate": 0.1111111111111111,
+      "selection_score": 0.5277777777777778
+    },
+    {
+      "top_k": 8,
+      "min_similarity": 0.65,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 18,
+      "raw_hit_at_k": 1.0,
+      "raw_mrr": 0.8490740740740741,
+      "hit_count": 11,
+      "hit_at_k": 0.6111111111111112,
+      "mrr": 0.5833333333333334,
+      "unanswerable_evidence_refusal_count": 5,
+      "unanswerable_evidence_refusal_rate": 0.8333333333333334,
+      "false_evidence_refusal_count": 6,
+      "false_evidence_refusal_rate": 0.3333333333333333,
+      "selection_score": 0.7222222222222222
+    },
+    {
+      "top_k": 8,
+      "min_similarity": 0.7,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 18,
+      "raw_hit_at_k": 1.0,
+      "raw_mrr": 0.8490740740740741,
+      "hit_count": 7,
+      "hit_at_k": 0.3888888888888889,
+      "mrr": 0.3611111111111111,
+      "unanswerable_evidence_refusal_count": 6,
+      "unanswerable_evidence_refusal_rate": 1.0,
+      "false_evidence_refusal_count": 11,
+      "false_evidence_refusal_rate": 0.6111111111111112,
+      "selection_score": 0.6944444444444444
+    },
+    {
+      "top_k": 8,
+      "min_similarity": 0.75,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 18,
+      "raw_hit_at_k": 1.0,
+      "raw_mrr": 0.8490740740740741,
+      "hit_count": 2,
+      "hit_at_k": 0.1111111111111111,
+      "mrr": 0.1111111111111111,
+      "unanswerable_evidence_refusal_count": 6,
+      "unanswerable_evidence_refusal_rate": 1.0,
+      "false_evidence_refusal_count": 16,
+      "false_evidence_refusal_rate": 0.8888888888888888,
+      "selection_score": 0.5555555555555556
+    },
+    {
+      "top_k": 8,
+      "min_similarity": 0.8,
+      "answerable": 18,
+      "unanswerable": 6,
+      "raw_hit_count": 18,
+      "raw_hit_at_k": 1.0,
+      "raw_mrr": 0.8490740740740741,
+      "hit_count": 0,
+      "hit_at_k": 0.0,
+      "mrr": 0.0,
+      "unanswerable_evidence_refusal_count": 6,
+      "unanswerable_evidence_refusal_rate": 1.0,
+      "false_evidence_refusal_count": 18,
+      "false_evidence_refusal_rate": 1.0,
+      "selection_score": 0.5
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "VAL-DB-01",
+      "course": "数据库原理",
+      "answerable": true,
+      "gold_sources": [
+        {
+          "doc_id": "DB-02",
+          "locator": {
+            "type": "pdf_page",
+            "start": 2,
+            "end": 2
+          }
+        }
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "1a631159-5e6a-48b0-a7f7-9ca33039e468",
+          "doc_id": "DB-02",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.628872,
+          "gold_match": true
+        },
+        {
+          "rank": 2,
+          "chunk_id": "e5b32153-ac24-479b-8e2c-b6178d9dad99",
+          "doc_id": "DB-08",
+          "locator": {
+            "end": 9,
+            "type": "docx_paragraph",
+            "start": 6
+          },
+          "similarity": 0.628207,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "ff497814-f509-4caa-b714-b404956fecab",
+          "doc_id": "DB-08",
+          "locator": {
+            "end": 6,
+            "type": "docx_paragraph",
+            "start": 3
+          },
+          "similarity": 0.577911,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "78ed3bed-32c0-4243-860a-8b38a272d9c9",
+          "doc_id": "DB-02",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.546863,
+          "gold_match": true
+        },
+        {
+          "rank": 5,
+          "chunk_id": "d8e8ec4a-d531-4ce0-bcff-0b3fc86200c6",
+          "doc_id": "DB-08",
+          "locator": {
+            "end": 12,
+            "type": "docx_paragraph",
+            "start": 9
+          },
+          "similarity": 0.529512,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "90dc7d7a-b818-4067-a45c-98561395ff12",
+          "doc_id": "DB-04",
+          "locator": {
+            "end": 3,
+            "type": "pdf_page",
+            "start": 3
+          },
+          "similarity": 0.51057,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "eeb3795f-01d0-4803-beca-32606be9b848",
+          "doc_id": "DB-06",
+          "locator": {
+            "end": 27,
+            "type": "txt_line",
+            "start": 25
+          },
+          "similarity": 0.510187,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "c17310f7-03d8-4027-80f5-2b5bf11b1192",
+          "doc_id": "DB-08",
+          "locator": {
+            "end": 14,
+            "type": "docx_paragraph",
+            "start": 13
+          },
+          "similarity": 0.510075,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-DB-02",
+      "course": "数据库原理",
+      "answerable": true,
+      "gold_sources": [
+        {
+          "doc_id": "DB-04",
+          "locator": {
+            "type": "pdf_page",
+            "start": 1,
+            "end": 1
+          }
+        }
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "9dd18014-a000-4ce2-b104-2f0079ca35ee",
+          "doc_id": "DB-04",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.72207,
+          "gold_match": true
+        },
+        {
+          "rank": 2,
+          "chunk_id": "90dc7d7a-b818-4067-a45c-98561395ff12",
+          "doc_id": "DB-04",
+          "locator": {
+            "end": 3,
+            "type": "pdf_page",
+            "start": 3
+          },
+          "similarity": 0.66224,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "2d47698a-d063-4630-ac33-74b9ab882301",
+          "doc_id": "DB-04",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.652214,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "d8e8ec4a-d531-4ce0-bcff-0b3fc86200c6",
+          "doc_id": "DB-08",
+          "locator": {
+            "end": 12,
+            "type": "docx_paragraph",
+            "start": 9
+          },
+          "similarity": 0.648272,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "674ead09-701c-40de-b5cc-57ad6168dffb",
+          "doc_id": "DB-04",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.593044,
+          "gold_match": true
+        },
+        {
+          "rank": 6,
+          "chunk_id": "40123c0f-4a82-4285-9e68-c9a589803d61",
+          "doc_id": "DB-04",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.587966,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "dde85cb8-fb00-465b-8ba6-beb89824de2b",
+          "doc_id": "DB-05",
+          "locator": {
+            "end": 14,
+            "type": "docx_paragraph",
+            "start": 11
+          },
+          "similarity": 0.579088,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "1a631159-5e6a-48b0-a7f7-9ca33039e468",
+          "doc_id": "DB-02",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.577937,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-DB-03",
+      "course": "数据库原理",
+      "answerable": true,
+      "gold_sources": [
+        {
+          "doc_id": "DB-08",
+          "locator": {
+            "type": "docx_paragraph",
+            "start": 2,
+            "end": 2
+          }
+        }
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "e1fd5fc3-7bcd-48c3-958e-7cfa58d68025",
+          "doc_id": "DB-08",
+          "locator": {
+            "end": 3,
+            "type": "docx_paragraph",
+            "start": 1
+          },
+          "similarity": 0.649037,
+          "gold_match": true
+        },
+        {
+          "rank": 2,
+          "chunk_id": "c17310f7-03d8-4027-80f5-2b5bf11b1192",
+          "doc_id": "DB-08",
+          "locator": {
+            "end": 14,
+            "type": "docx_paragraph",
+            "start": 13
+          },
+          "similarity": 0.611113,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "e4c7eeff-3c1e-4675-bfcf-096a267a1aa0",
+          "doc_id": "DB-08",
+          "locator": {
+            "end": 13,
+            "type": "docx_paragraph",
+            "start": 11
+          },
+          "similarity": 0.531337,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "be02fa4b-6cbe-48d6-bbf2-79a3562d956c",
+          "doc_id": "DB-07",
+          "locator": {
+            "end": 39,
+            "type": "txt_line",
+            "start": 35
+          },
+          "similarity": 0.52645,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "90dc7d7a-b818-4067-a45c-98561395ff12",
+          "doc_id": "DB-04",
+          "locator": {
+            "end": 3,
+            "type": "pdf_page",
+            "start": 3
+          },
+          "similarity": 0.521714,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "aa2c4807-1ee9-4cfb-b1bc-a530b96423fb",
+          "doc_id": "DB-07",
+          "locator": {
+            "end": 7,
+            "type": "txt_line",
+            "start": 1
+          },
+          "similarity": 0.516078,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "822a979a-0193-4999-b2d2-b80a956a4715",
+          "doc_id": "DB-05",
+          "locator": {
+            "end": 6,
+            "type": "docx_paragraph",
+            "start": 3
+          },
+          "similarity": 0.514455,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "2d47698a-d063-4630-ac33-74b9ab882301",
+          "doc_id": "DB-04",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.514244,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-DB-04",
+      "course": "数据库原理",
+      "answerable": true,
+      "gold_sources": [
+        {
+          "doc_id": "DB-05",
+          "locator": {
+            "type": "docx_paragraph",
+            "start": 9,
+            "end": 9
+          }
+        }
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "822a979a-0193-4999-b2d2-b80a956a4715",
+          "doc_id": "DB-05",
+          "locator": {
+            "end": 6,
+            "type": "docx_paragraph",
+            "start": 3
+          },
+          "similarity": 0.574809,
+          "gold_match": false
+        },
+        {
+          "rank": 2,
+          "chunk_id": "8e088118-deee-49ca-a1fb-9fe2d2bb0afb",
+          "doc_id": "DB-01",
+          "locator": {
+            "end": 8,
+            "type": "docx_paragraph",
+            "start": 6
+          },
+          "similarity": 0.54146,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "3cf9549d-f257-4838-958f-e19db7399d6a",
+          "doc_id": "DB-07",
+          "locator": {
+            "end": 35,
+            "type": "txt_line",
+            "start": 27
+          },
+          "similarity": 0.533419,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "ba3e6cd7-714f-4ede-b1b4-892f38c03fd0",
+          "doc_id": "DB-05",
+          "locator": {
+            "end": 9,
+            "type": "docx_paragraph",
+            "start": 6
+          },
+          "similarity": 0.531203,
+          "gold_match": true
+        },
+        {
+          "rank": 5,
+          "chunk_id": "c70705e2-542d-4eb0-8df3-73d2290c148a",
+          "doc_id": "DB-05",
+          "locator": {
+            "end": 11,
+            "type": "docx_paragraph",
+            "start": 8
+          },
+          "similarity": 0.490066,
+          "gold_match": true
+        },
+        {
+          "rank": 6,
+          "chunk_id": "dde85cb8-fb00-465b-8ba6-beb89824de2b",
+          "doc_id": "DB-05",
+          "locator": {
+            "end": 14,
+            "type": "docx_paragraph",
+            "start": 11
+          },
+          "similarity": 0.489364,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "f7645412-7b38-4d2e-99bc-bfc849f62e2f",
+          "doc_id": "DB-02",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.487672,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "af15a12e-5abb-4a8d-8467-8acfa64a1845",
+          "doc_id": "DB-03",
+          "locator": {
+            "end": 3,
+            "type": "pdf_page",
+            "start": 3
+          },
+          "similarity": 0.484345,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-DB-05",
+      "course": "数据库原理",
+      "answerable": true,
+      "gold_sources": [
+        {
+          "doc_id": "DB-03",
+          "locator": {
+            "type": "pdf_page",
+            "start": 2,
+            "end": 2
+          }
+        },
+        {
+          "doc_id": "DB-06",
+          "locator": {
+            "type": "txt_line",
+            "start": 9,
+            "end": 9
+          }
+        },
+        {
+          "doc_id": "DB-06",
+          "locator": {
+            "type": "txt_line",
+            "start": 15,
+            "end": 15
+          }
+        }
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "87d20653-5818-4b01-96de-49e98842a149",
+          "doc_id": "DB-03",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.720306,
+          "gold_match": true
+        },
+        {
+          "rank": 2,
+          "chunk_id": "8b6e1787-1744-4b85-9713-1ba27d75b473",
+          "doc_id": "DB-03",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.633541,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "fc513a68-3a50-449c-b3f8-833902e27df8",
+          "doc_id": "DB-03",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.609037,
+          "gold_match": true
+        },
+        {
+          "rank": 4,
+          "chunk_id": "319c97df-0a07-4c3b-9a89-2ae1988498e9",
+          "doc_id": "DB-06",
+          "locator": {
+            "end": 5,
+            "type": "txt_line",
+            "start": 1
+          },
+          "similarity": 0.608154,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "674ead09-701c-40de-b5cc-57ad6168dffb",
+          "doc_id": "DB-04",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.562887,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "af15a12e-5abb-4a8d-8467-8acfa64a1845",
+          "doc_id": "DB-03",
+          "locator": {
+            "end": 3,
+            "type": "pdf_page",
+            "start": 3
+          },
+          "similarity": 0.514283,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "ba3e6cd7-714f-4ede-b1b4-892f38c03fd0",
+          "doc_id": "DB-05",
+          "locator": {
+            "end": 9,
+            "type": "docx_paragraph",
+            "start": 6
+          },
+          "similarity": 0.506626,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "d5385068-55fc-40b1-aac6-3333958b1997",
+          "doc_id": "DB-02",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.503026,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-DB-06",
+      "course": "数据库原理",
+      "answerable": true,
+      "gold_sources": [
+        {
+          "doc_id": "DB-01",
+          "locator": {
+            "type": "docx_paragraph",
+            "start": 11,
+            "end": 11
+          }
+        },
+        {
+          "doc_id": "DB-05",
+          "locator": {
+            "type": "docx_paragraph",
+            "start": 9,
+            "end": 9
+          }
+        }
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "c70705e2-542d-4eb0-8df3-73d2290c148a",
+          "doc_id": "DB-05",
+          "locator": {
+            "end": 11,
+            "type": "docx_paragraph",
+            "start": 8
+          },
+          "similarity": 0.713722,
+          "gold_match": true
+        },
+        {
+          "rank": 2,
+          "chunk_id": "3cf9549d-f257-4838-958f-e19db7399d6a",
+          "doc_id": "DB-07",
+          "locator": {
+            "end": 35,
+            "type": "txt_line",
+            "start": 27
+          },
+          "similarity": 0.693176,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "dde85cb8-fb00-465b-8ba6-beb89824de2b",
+          "doc_id": "DB-05",
+          "locator": {
+            "end": 14,
+            "type": "docx_paragraph",
+            "start": 11
+          },
+          "similarity": 0.689415,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "bcc8ddaa-4565-4e83-902e-0f99ff310244",
+          "doc_id": "DB-01",
+          "locator": {
+            "end": 11,
+            "type": "docx_paragraph",
+            "start": 8
+          },
+          "similarity": 0.682911,
+          "gold_match": true
+        },
+        {
+          "rank": 5,
+          "chunk_id": "822a979a-0193-4999-b2d2-b80a956a4715",
+          "doc_id": "DB-05",
+          "locator": {
+            "end": 6,
+            "type": "docx_paragraph",
+            "start": 3
+          },
+          "similarity": 0.678564,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "8e088118-deee-49ca-a1fb-9fe2d2bb0afb",
+          "doc_id": "DB-01",
+          "locator": {
+            "end": 8,
+            "type": "docx_paragraph",
+            "start": 6
+          },
+          "similarity": 0.638566,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "2905f219-69ef-4cb0-93c1-e6ba874bc06a",
+          "doc_id": "DB-07",
+          "locator": {
+            "end": 15,
+            "type": "txt_line",
+            "start": 7
+          },
+          "similarity": 0.637752,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "ef6dd986-d7fb-4635-906b-b1a32739446c",
+          "doc_id": "DB-01",
+          "locator": {
+            "end": 13,
+            "type": "docx_paragraph",
+            "start": 11
+          },
+          "similarity": 0.636822,
+          "gold_match": true
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-DB-07",
+      "course": "数据库原理",
+      "answerable": false,
+      "gold_sources": [],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "deb82dca-5ac2-48a9-8ca5-36b15b1ec061",
+          "doc_id": "DB-01",
+          "locator": {
+            "end": 14,
+            "type": "docx_paragraph",
+            "start": 13
+          },
+          "similarity": 0.615401,
+          "gold_match": false
+        },
+        {
+          "rank": 2,
+          "chunk_id": "aa2c4807-1ee9-4cfb-b1bc-a530b96423fb",
+          "doc_id": "DB-07",
+          "locator": {
+            "end": 7,
+            "type": "txt_line",
+            "start": 1
+          },
+          "similarity": 0.588327,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "3cf9549d-f257-4838-958f-e19db7399d6a",
+          "doc_id": "DB-07",
+          "locator": {
+            "end": 35,
+            "type": "txt_line",
+            "start": 27
+          },
+          "similarity": 0.584532,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "c70705e2-542d-4eb0-8df3-73d2290c148a",
+          "doc_id": "DB-05",
+          "locator": {
+            "end": 11,
+            "type": "docx_paragraph",
+            "start": 8
+          },
+          "similarity": 0.577148,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "9b52e353-aba3-4626-9c81-edf45b812e71",
+          "doc_id": "DB-01",
+          "locator": {
+            "end": 3,
+            "type": "docx_paragraph",
+            "start": 1
+          },
+          "similarity": 0.570835,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "bcc8ddaa-4565-4e83-902e-0f99ff310244",
+          "doc_id": "DB-01",
+          "locator": {
+            "end": 11,
+            "type": "docx_paragraph",
+            "start": 8
+          },
+          "similarity": 0.553019,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "ef6dd986-d7fb-4635-906b-b1a32739446c",
+          "doc_id": "DB-01",
+          "locator": {
+            "end": 13,
+            "type": "docx_paragraph",
+            "start": 11
+          },
+          "similarity": 0.550606,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "e1fd5fc3-7bcd-48c3-958e-7cfa58d68025",
+          "doc_id": "DB-08",
+          "locator": {
+            "end": 3,
+            "type": "docx_paragraph",
+            "start": 1
+          },
+          "similarity": 0.550571,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-DB-08",
+      "course": "数据库原理",
+      "answerable": false,
+      "gold_sources": [],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "87d20653-5818-4b01-96de-49e98842a149",
+          "doc_id": "DB-03",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.597887,
+          "gold_match": false
+        },
+        {
+          "rank": 2,
+          "chunk_id": "8b6e1787-1744-4b85-9713-1ba27d75b473",
+          "doc_id": "DB-03",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.544419,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "319c97df-0a07-4c3b-9a89-2ae1988498e9",
+          "doc_id": "DB-06",
+          "locator": {
+            "end": 5,
+            "type": "txt_line",
+            "start": 1
+          },
+          "similarity": 0.533574,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "674ead09-701c-40de-b5cc-57ad6168dffb",
+          "doc_id": "DB-04",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.509513,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "fc513a68-3a50-449c-b3f8-833902e27df8",
+          "doc_id": "DB-03",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.474627,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "f7645412-7b38-4d2e-99bc-bfc849f62e2f",
+          "doc_id": "DB-02",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.473118,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "78ed3bed-32c0-4243-860a-8b38a272d9c9",
+          "doc_id": "DB-02",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.469613,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "d5385068-55fc-40b1-aac6-3333958b1997",
+          "doc_id": "DB-02",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.464944,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-NET-01",
+      "course": "计算机网络",
+      "answerable": true,
+      "gold_sources": [
+        {
+          "doc_id": "NET-02",
+          "locator": {
+            "type": "pdf_page",
+            "start": 1,
+            "end": 1
+          }
+        }
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "4bb31712-94a2-4b0e-834b-d3521c3d689d",
+          "doc_id": "NET-02",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.683673,
+          "gold_match": true
+        },
+        {
+          "rank": 2,
+          "chunk_id": "96d790b4-b38a-4942-8d0d-c6461625a9fd",
+          "doc_id": "NET-02",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.658295,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "dd4445e8-103d-425e-8f8d-7c741c6ccffd",
+          "doc_id": "NET-02",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.609312,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "ada6d748-de71-4906-a5fe-508b4e08603a",
+          "doc_id": "NET-05",
+          "locator": {
+            "end": 6,
+            "type": "docx_paragraph",
+            "start": 3
+          },
+          "similarity": 0.594263,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "a6dd6a13-087a-4118-bd8d-b91884c2f1d3",
+          "doc_id": "NET-08",
+          "locator": {
+            "end": 6,
+            "type": "docx_paragraph",
+            "start": 3
+          },
+          "similarity": 0.592749,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "22ad60ba-5451-4973-b101-4a4f31fe6641",
+          "doc_id": "NET-08",
+          "locator": {
+            "end": 9,
+            "type": "docx_paragraph",
+            "start": 6
+          },
+          "similarity": 0.590726,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "b6cee161-9807-40d6-85f9-003747e8862b",
+          "doc_id": "NET-02",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.58915,
+          "gold_match": true
+        },
+        {
+          "rank": 8,
+          "chunk_id": "d635ee04-1519-4628-b629-cde03b4f9f08",
+          "doc_id": "NET-08",
+          "locator": {
+            "end": 13,
+            "type": "docx_paragraph",
+            "start": 10
+          },
+          "similarity": 0.586683,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-NET-02",
+      "course": "计算机网络",
+      "answerable": true,
+      "gold_sources": [
+        {
+          "doc_id": "NET-03",
+          "locator": {
+            "type": "pdf_page",
+            "start": 2,
+            "end": 2
+          }
+        }
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "2d42d309-e60d-46d7-88da-36ee85e2adbd",
+          "doc_id": "NET-03",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.661451,
+          "gold_match": true
+        },
+        {
+          "rank": 2,
+          "chunk_id": "98348eb8-62cc-430b-9168-64e8e29d2e8c",
+          "doc_id": "NET-03",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.640516,
+          "gold_match": true
+        },
+        {
+          "rank": 3,
+          "chunk_id": "5cb8ad9e-7c07-49fe-9a22-7f0cd44152f3",
+          "doc_id": "NET-08",
+          "locator": {
+            "end": 12,
+            "type": "docx_paragraph",
+            "start": 9
+          },
+          "similarity": 0.627473,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "ffc3d200-72c7-4df6-913d-966062a5c23f",
+          "doc_id": "NET-07",
+          "locator": {
+            "end": 27,
+            "type": "txt_line",
+            "start": 19
+          },
+          "similarity": 0.599471,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "c286c6b6-e773-4b1b-abbe-aa2c280a219b",
+          "doc_id": "NET-08",
+          "locator": {
+            "end": 14,
+            "type": "docx_paragraph",
+            "start": 13
+          },
+          "similarity": 0.588965,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "38d54410-c6f0-4d99-bbbf-ba66e6d873d7",
+          "doc_id": "NET-03",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.572396,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "cd22566e-bf7e-4f7e-b65d-e5c41a5e1180",
+          "doc_id": "NET-05",
+          "locator": {
+            "end": 11,
+            "type": "docx_paragraph",
+            "start": 8
+          },
+          "similarity": 0.561059,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "eb17ad4f-f525-42b4-b900-baeec775cd72",
+          "doc_id": "NET-06",
+          "locator": {
+            "end": 29,
+            "type": "txt_line",
+            "start": 21
+          },
+          "similarity": 0.559344,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-NET-03",
+      "course": "计算机网络",
+      "answerable": true,
+      "gold_sources": [
+        {
+          "doc_id": "NET-06",
+          "locator": {
+            "type": "txt_line",
+            "start": 9,
+            "end": 9
+          }
+        }
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "3c24dc5c-3c4b-4572-aa50-818bd73a0a45",
+          "doc_id": "NET-06",
+          "locator": {
+            "end": 13,
+            "type": "txt_line",
+            "start": 7
+          },
+          "similarity": 0.647568,
+          "gold_match": true
+        },
+        {
+          "rank": 2,
+          "chunk_id": "98348eb8-62cc-430b-9168-64e8e29d2e8c",
+          "doc_id": "NET-03",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.639726,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "0f7380f0-f1c6-4af2-86c5-883ab29811ed",
+          "doc_id": "NET-06",
+          "locator": {
+            "end": 31,
+            "type": "txt_line",
+            "start": 27
+          },
+          "similarity": 0.615105,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "2961a20f-df99-4f3a-9423-d49dc806da62",
+          "doc_id": "NET-04",
+          "locator": {
+            "end": 3,
+            "type": "pdf_page",
+            "start": 3
+          },
+          "similarity": 0.603045,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "36df5c59-09e6-423c-8a49-828c9f34f725",
+          "doc_id": "NET-03",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.601209,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "1718ae14-444c-4cc8-8036-6c5de8232336",
+          "doc_id": "NET-03",
+          "locator": {
+            "end": 3,
+            "type": "pdf_page",
+            "start": 3
+          },
+          "similarity": 0.597789,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "02c18ed4-44d0-47ff-9a9f-44467fc094ae",
+          "doc_id": "NET-04",
+          "locator": {
+            "end": 3,
+            "type": "pdf_page",
+            "start": 3
+          },
+          "similarity": 0.594922,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "f04b6cd3-6c0a-4da2-a576-d74753ea62fc",
+          "doc_id": "NET-04",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.587811,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-NET-04",
+      "course": "计算机网络",
+      "answerable": true,
+      "gold_sources": [
+        {
+          "doc_id": "NET-08",
+          "locator": {
+            "type": "docx_paragraph",
+            "start": 4,
+            "end": 4
+          }
+        }
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "c286c6b6-e773-4b1b-abbe-aa2c280a219b",
+          "doc_id": "NET-08",
+          "locator": {
+            "end": 14,
+            "type": "docx_paragraph",
+            "start": 13
+          },
+          "similarity": 0.541007,
+          "gold_match": false
+        },
+        {
+          "rank": 2,
+          "chunk_id": "191792d7-c279-466e-a555-b242fd22321a",
+          "doc_id": "NET-08",
+          "locator": {
+            "end": 3,
+            "type": "docx_paragraph",
+            "start": 1
+          },
+          "similarity": 0.520404,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "d635ee04-1519-4628-b629-cde03b4f9f08",
+          "doc_id": "NET-08",
+          "locator": {
+            "end": 13,
+            "type": "docx_paragraph",
+            "start": 10
+          },
+          "similarity": 0.463446,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "dba2802d-375b-41db-b05d-f4fbcfa74c1c",
+          "doc_id": "NET-07",
+          "locator": {
+            "end": 15,
+            "type": "txt_line",
+            "start": 7
+          },
+          "similarity": 0.453567,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "a6dd6a13-087a-4118-bd8d-b91884c2f1d3",
+          "doc_id": "NET-08",
+          "locator": {
+            "end": 6,
+            "type": "docx_paragraph",
+            "start": 3
+          },
+          "similarity": 0.44443,
+          "gold_match": true
+        },
+        {
+          "rank": 6,
+          "chunk_id": "5cb8ad9e-7c07-49fe-9a22-7f0cd44152f3",
+          "doc_id": "NET-08",
+          "locator": {
+            "end": 12,
+            "type": "docx_paragraph",
+            "start": 9
+          },
+          "similarity": 0.438743,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "4a94f95d-1ee0-4aad-94ff-49c535fe7e85",
+          "doc_id": "NET-01",
+          "locator": {
+            "end": 8,
+            "type": "docx_paragraph",
+            "start": 6
+          },
+          "similarity": 0.438711,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "02c18ed4-44d0-47ff-9a9f-44467fc094ae",
+          "doc_id": "NET-04",
+          "locator": {
+            "end": 3,
+            "type": "pdf_page",
+            "start": 3
+          },
+          "similarity": 0.426004,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-NET-05",
+      "course": "计算机网络",
+      "answerable": true,
+      "gold_sources": [
+        {
+          "doc_id": "NET-03",
+          "locator": {
+            "type": "pdf_page",
+            "start": 2,
+            "end": 2
+          }
+        },
+        {
+          "doc_id": "NET-06",
+          "locator": {
+            "type": "txt_line",
+            "start": 17,
+            "end": 17
+          }
+        }
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "2d42d309-e60d-46d7-88da-36ee85e2adbd",
+          "doc_id": "NET-03",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.75274,
+          "gold_match": true
+        },
+        {
+          "rank": 2,
+          "chunk_id": "edcf50f2-e1b7-488b-a515-3b9f841454b6",
+          "doc_id": "NET-06",
+          "locator": {
+            "end": 7,
+            "type": "txt_line",
+            "start": 1
+          },
+          "similarity": 0.618548,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "36df5c59-09e6-423c-8a49-828c9f34f725",
+          "doc_id": "NET-03",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.611002,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "676f8d23-3281-4a22-b670-856c0644b09f",
+          "doc_id": "NET-04",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.577041,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "76a52915-d3d5-49f2-99b5-e556f366b152",
+          "doc_id": "NET-06",
+          "locator": {
+            "end": 19,
+            "type": "txt_line",
+            "start": 13
+          },
+          "similarity": 0.570895,
+          "gold_match": true
+        },
+        {
+          "rank": 6,
+          "chunk_id": "98348eb8-62cc-430b-9168-64e8e29d2e8c",
+          "doc_id": "NET-03",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.550091,
+          "gold_match": true
+        },
+        {
+          "rank": 7,
+          "chunk_id": "e78b8c99-e311-4de1-86e3-8a5f3516bddc",
+          "doc_id": "NET-01",
+          "locator": {
+            "end": 11,
+            "type": "docx_paragraph",
+            "start": 8
+          },
+          "similarity": 0.538501,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "c286c6b6-e773-4b1b-abbe-aa2c280a219b",
+          "doc_id": "NET-08",
+          "locator": {
+            "end": 14,
+            "type": "docx_paragraph",
+            "start": 13
+          },
+          "similarity": 0.537968,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-NET-06",
+      "course": "计算机网络",
+      "answerable": true,
+      "gold_sources": [
+        {
+          "doc_id": "NET-08",
+          "locator": {
+            "type": "docx_paragraph",
+            "start": 3,
+            "end": 3
+          }
+        },
+        {
+          "doc_id": "NET-01",
+          "locator": {
+            "type": "docx_paragraph",
+            "start": 6,
+            "end": 6
+          }
+        }
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "191792d7-c279-466e-a555-b242fd22321a",
+          "doc_id": "NET-08",
+          "locator": {
+            "end": 3,
+            "type": "docx_paragraph",
+            "start": 1
+          },
+          "similarity": 0.650899,
+          "gold_match": true
+        },
+        {
+          "rank": 2,
+          "chunk_id": "4a94f95d-1ee0-4aad-94ff-49c535fe7e85",
+          "doc_id": "NET-01",
+          "locator": {
+            "end": 8,
+            "type": "docx_paragraph",
+            "start": 6
+          },
+          "similarity": 0.572345,
+          "gold_match": true
+        },
+        {
+          "rank": 3,
+          "chunk_id": "33940860-eece-4e73-8a29-2d1b3767c640",
+          "doc_id": "NET-07",
+          "locator": {
+            "end": 35,
+            "type": "txt_line",
+            "start": 27
+          },
+          "similarity": 0.557222,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "a8ebc350-e3fa-4a5d-91aa-88abfe30c485",
+          "doc_id": "NET-07",
+          "locator": {
+            "end": 39,
+            "type": "txt_line",
+            "start": 35
+          },
+          "similarity": 0.544291,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "dba2802d-375b-41db-b05d-f4fbcfa74c1c",
+          "doc_id": "NET-07",
+          "locator": {
+            "end": 15,
+            "type": "txt_line",
+            "start": 7
+          },
+          "similarity": 0.534712,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "8d477abf-6a92-4b08-a58f-be4fe5290284",
+          "doc_id": "NET-01",
+          "locator": {
+            "end": 3,
+            "type": "docx_paragraph",
+            "start": 1
+          },
+          "similarity": 0.531425,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "a6dd6a13-087a-4118-bd8d-b91884c2f1d3",
+          "doc_id": "NET-08",
+          "locator": {
+            "end": 6,
+            "type": "docx_paragraph",
+            "start": 3
+          },
+          "similarity": 0.530647,
+          "gold_match": true
+        },
+        {
+          "rank": 8,
+          "chunk_id": "5cb8ad9e-7c07-49fe-9a22-7f0cd44152f3",
+          "doc_id": "NET-08",
+          "locator": {
+            "end": 12,
+            "type": "docx_paragraph",
+            "start": 9
+          },
+          "similarity": 0.528859,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-NET-07",
+      "course": "计算机网络",
+      "answerable": false,
+      "gold_sources": [],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "edcf50f2-e1b7-488b-a515-3b9f841454b6",
+          "doc_id": "NET-06",
+          "locator": {
+            "end": 7,
+            "type": "txt_line",
+            "start": 1
+          },
+          "similarity": 0.646161,
+          "gold_match": false
+        },
+        {
+          "rank": 2,
+          "chunk_id": "4bb31712-94a2-4b0e-834b-d3521c3d689d",
+          "doc_id": "NET-02",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.61005,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "3c24dc5c-3c4b-4572-aa50-818bd73a0a45",
+          "doc_id": "NET-06",
+          "locator": {
+            "end": 13,
+            "type": "txt_line",
+            "start": 7
+          },
+          "similarity": 0.607685,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "f04b6cd3-6c0a-4da2-a576-d74753ea62fc",
+          "doc_id": "NET-04",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.603626,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "676f8d23-3281-4a22-b670-856c0644b09f",
+          "doc_id": "NET-04",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.584922,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "36df5c59-09e6-423c-8a49-828c9f34f725",
+          "doc_id": "NET-03",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.572592,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "b6cee161-9807-40d6-85f9-003747e8862b",
+          "doc_id": "NET-02",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.564401,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "38d54410-c6f0-4d99-bbbf-ba66e6d873d7",
+          "doc_id": "NET-03",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.563828,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-NET-08",
+      "course": "计算机网络",
+      "answerable": false,
+      "gold_sources": [],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "38d54410-c6f0-4d99-bbbf-ba66e6d873d7",
+          "doc_id": "NET-03",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.641417,
+          "gold_match": false
+        },
+        {
+          "rank": 2,
+          "chunk_id": "2961a20f-df99-4f3a-9423-d49dc806da62",
+          "doc_id": "NET-04",
+          "locator": {
+            "end": 3,
+            "type": "pdf_page",
+            "start": 3
+          },
+          "similarity": 0.621199,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "3c24dc5c-3c4b-4572-aa50-818bd73a0a45",
+          "doc_id": "NET-06",
+          "locator": {
+            "end": 13,
+            "type": "txt_line",
+            "start": 7
+          },
+          "similarity": 0.606097,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "02c18ed4-44d0-47ff-9a9f-44467fc094ae",
+          "doc_id": "NET-04",
+          "locator": {
+            "end": 3,
+            "type": "pdf_page",
+            "start": 3
+          },
+          "similarity": 0.604783,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "cd22566e-bf7e-4f7e-b65d-e5c41a5e1180",
+          "doc_id": "NET-05",
+          "locator": {
+            "end": 11,
+            "type": "docx_paragraph",
+            "start": 8
+          },
+          "similarity": 0.58299,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "eb17ad4f-f525-42b4-b900-baeec775cd72",
+          "doc_id": "NET-06",
+          "locator": {
+            "end": 29,
+            "type": "txt_line",
+            "start": 21
+          },
+          "similarity": 0.566534,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "cd30facf-e712-46f9-9ac0-792abfb51657",
+          "doc_id": "NET-05",
+          "locator": {
+            "end": 8,
+            "type": "docx_paragraph",
+            "start": 6
+          },
+          "similarity": 0.564376,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "f04b6cd3-6c0a-4da2-a576-d74753ea62fc",
+          "doc_id": "NET-04",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.563987,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-PY-01",
+      "course": "Python 程序设计",
+      "answerable": true,
+      "gold_sources": [
+        {
+          "doc_id": "PY-02",
+          "locator": {
+            "type": "pdf_page",
+            "start": 2,
+            "end": 2
+          }
+        }
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "52ba971b-ceed-488b-b6fd-466c4a9713dd",
+          "doc_id": "PY-02",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.663944,
+          "gold_match": true
+        },
+        {
+          "rank": 2,
+          "chunk_id": "5c3a4c05-eb3c-42d9-8905-a01dcbf231fe",
+          "doc_id": "PY-07",
+          "locator": {
+            "end": 7,
+            "type": "txt_line",
+            "start": 1
+          },
+          "similarity": 0.645167,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "a5c744e9-b097-48db-92ff-39761a40be06",
+          "doc_id": "PY-08",
+          "locator": {
+            "end": 9,
+            "type": "docx_paragraph",
+            "start": 6
+          },
+          "similarity": 0.630565,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "28d28138-e660-4e7a-b11e-aa68728db534",
+          "doc_id": "PY-01",
+          "locator": {
+            "end": 3,
+            "type": "docx_paragraph",
+            "start": 1
+          },
+          "similarity": 0.616104,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "7bfab4e0-a01c-4fd4-b880-b1e1304b5e46",
+          "doc_id": "PY-02",
+          "locator": {
+            "end": 3,
+            "type": "pdf_page",
+            "start": 3
+          },
+          "similarity": 0.612424,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "3a793fed-c222-42b9-83be-37f0502bbf3b",
+          "doc_id": "PY-08",
+          "locator": {
+            "end": 14,
+            "type": "docx_paragraph",
+            "start": 11
+          },
+          "similarity": 0.597829,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "454d06a0-45ec-4c68-9884-fb5be4758de5",
+          "doc_id": "PY-05",
+          "locator": {
+            "end": 4,
+            "type": "docx_paragraph",
+            "start": 1
+          },
+          "similarity": 0.593599,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "cc8ae822-9670-4986-b8db-98385c187b9b",
+          "doc_id": "PY-08",
+          "locator": {
+            "end": 6,
+            "type": "docx_paragraph",
+            "start": 3
+          },
+          "similarity": 0.586775,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-PY-02",
+      "course": "Python 程序设计",
+      "answerable": true,
+      "gold_sources": [
+        {
+          "doc_id": "PY-04",
+          "locator": {
+            "type": "pdf_page",
+            "start": 2,
+            "end": 2
+          }
+        }
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "f9633723-40cb-4368-9c88-f923bd2f427b",
+          "doc_id": "PY-04",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.644411,
+          "gold_match": true
+        },
+        {
+          "rank": 2,
+          "chunk_id": "b1095755-cb67-4c42-9f38-75979d27acc4",
+          "doc_id": "PY-04",
+          "locator": {
+            "end": 3,
+            "type": "pdf_page",
+            "start": 3
+          },
+          "similarity": 0.622425,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "ec00a0c9-4b66-4372-bce6-cebc6fe96699",
+          "doc_id": "PY-06",
+          "locator": {
+            "end": 29,
+            "type": "txt_line",
+            "start": 29
+          },
+          "similarity": 0.618183,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "d4d45327-6ef1-4b16-b2a9-3c540bb7087b",
+          "doc_id": "PY-04",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.595494,
+          "gold_match": true
+        },
+        {
+          "rank": 5,
+          "chunk_id": "5d6d669a-6d0c-4c84-845e-6ad5ed217688",
+          "doc_id": "PY-08",
+          "locator": {
+            "end": 11,
+            "type": "docx_paragraph",
+            "start": 9
+          },
+          "similarity": 0.589403,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "b2cd61fe-36bc-484e-bfef-5d28d6047d08",
+          "doc_id": "PY-05",
+          "locator": {
+            "end": 14,
+            "type": "docx_paragraph",
+            "start": 11
+          },
+          "similarity": 0.575515,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "2f74575a-6ee3-45e5-a865-c2db274bdb32",
+          "doc_id": "PY-04",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.55961,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "b8542bcb-5ace-476f-9cc5-cd6199e6b31f",
+          "doc_id": "PY-05",
+          "locator": {
+            "end": 15,
+            "type": "docx_paragraph",
+            "start": 14
+          },
+          "similarity": 0.551204,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-PY-03",
+      "course": "Python 程序设计",
+      "answerable": true,
+      "gold_sources": [
+        {
+          "doc_id": "PY-04",
+          "locator": {
+            "type": "pdf_page",
+            "start": 3,
+            "end": 3
+          }
+        }
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "7892d8b2-dfc8-47d8-89a7-6e210a5e175a",
+          "doc_id": "PY-04",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.748126,
+          "gold_match": false
+        },
+        {
+          "rank": 2,
+          "chunk_id": "dafe1ebd-0718-45c7-ab70-89db598fec4e",
+          "doc_id": "PY-04",
+          "locator": {
+            "end": 3,
+            "type": "pdf_page",
+            "start": 3
+          },
+          "similarity": 0.731092,
+          "gold_match": true
+        },
+        {
+          "rank": 3,
+          "chunk_id": "1a4a7eef-8d28-42ff-b9ba-bedc43bef00b",
+          "doc_id": "PY-06",
+          "locator": {
+            "end": 25,
+            "type": "txt_line",
+            "start": 21
+          },
+          "similarity": 0.714328,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "0e1a5e79-280e-40ff-b418-ab3f9ba1906f",
+          "doc_id": "PY-06",
+          "locator": {
+            "end": 29,
+            "type": "txt_line",
+            "start": 25
+          },
+          "similarity": 0.700999,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "d4d45327-6ef1-4b16-b2a9-3c540bb7087b",
+          "doc_id": "PY-04",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.699975,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "2f74575a-6ee3-45e5-a865-c2db274bdb32",
+          "doc_id": "PY-04",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.680638,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "b1095755-cb67-4c42-9f38-75979d27acc4",
+          "doc_id": "PY-04",
+          "locator": {
+            "end": 3,
+            "type": "pdf_page",
+            "start": 3
+          },
+          "similarity": 0.64976,
+          "gold_match": true
+        },
+        {
+          "rank": 8,
+          "chunk_id": "f9633723-40cb-4368-9c88-f923bd2f427b",
+          "doc_id": "PY-04",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.646976,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-PY-04",
+      "course": "Python 程序设计",
+      "answerable": true,
+      "gold_sources": [
+        {
+          "doc_id": "PY-08",
+          "locator": {
+            "type": "docx_paragraph",
+            "start": 2,
+            "end": 2
+          }
+        }
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "90a100ae-4d4e-4285-ac53-6628f7dbb41e",
+          "doc_id": "PY-08",
+          "locator": {
+            "end": 15,
+            "type": "docx_paragraph",
+            "start": 13
+          },
+          "similarity": 0.668506,
+          "gold_match": false
+        },
+        {
+          "rank": 2,
+          "chunk_id": "3a793fed-c222-42b9-83be-37f0502bbf3b",
+          "doc_id": "PY-08",
+          "locator": {
+            "end": 14,
+            "type": "docx_paragraph",
+            "start": 11
+          },
+          "similarity": 0.637291,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "077797cf-1a70-4f5d-a528-f229a106cdce",
+          "doc_id": "PY-08",
+          "locator": {
+            "end": 3,
+            "type": "docx_paragraph",
+            "start": 1
+          },
+          "similarity": 0.636728,
+          "gold_match": true
+        },
+        {
+          "rank": 4,
+          "chunk_id": "28d28138-e660-4e7a-b11e-aa68728db534",
+          "doc_id": "PY-01",
+          "locator": {
+            "end": 3,
+            "type": "docx_paragraph",
+            "start": 1
+          },
+          "similarity": 0.574437,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "a5c744e9-b097-48db-92ff-39761a40be06",
+          "doc_id": "PY-08",
+          "locator": {
+            "end": 9,
+            "type": "docx_paragraph",
+            "start": 6
+          },
+          "similarity": 0.56476,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "5c3a4c05-eb3c-42d9-8905-a01dcbf231fe",
+          "doc_id": "PY-07",
+          "locator": {
+            "end": 7,
+            "type": "txt_line",
+            "start": 1
+          },
+          "similarity": 0.564621,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "cc8ae822-9670-4986-b8db-98385c187b9b",
+          "doc_id": "PY-08",
+          "locator": {
+            "end": 6,
+            "type": "docx_paragraph",
+            "start": 3
+          },
+          "similarity": 0.558949,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "c06ef6dd-a9f4-427b-bcd1-0b48695a1553",
+          "doc_id": "PY-07",
+          "locator": {
+            "end": 37,
+            "type": "txt_line",
+            "start": 31
+          },
+          "similarity": 0.554118,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-PY-05",
+      "course": "Python 程序设计",
+      "answerable": true,
+      "gold_sources": [
+        {
+          "doc_id": "PY-03",
+          "locator": {
+            "type": "pdf_page",
+            "start": 2,
+            "end": 2
+          }
+        },
+        {
+          "doc_id": "PY-06",
+          "locator": {
+            "type": "txt_line",
+            "start": 9,
+            "end": 9
+          }
+        },
+        {
+          "doc_id": "PY-06",
+          "locator": {
+            "type": "txt_line",
+            "start": 17,
+            "end": 17
+          }
+        }
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "8b2039b5-1797-43b0-bdcd-aff17ddf0c69",
+          "doc_id": "PY-06",
+          "locator": {
+            "end": 17,
+            "type": "txt_line",
+            "start": 11
+          },
+          "similarity": 0.771592,
+          "gold_match": true
+        },
+        {
+          "rank": 2,
+          "chunk_id": "fb073757-48a8-4985-9297-b76faab2547e",
+          "doc_id": "PY-06",
+          "locator": {
+            "end": 11,
+            "type": "txt_line",
+            "start": 5
+          },
+          "similarity": 0.753167,
+          "gold_match": true
+        },
+        {
+          "rank": 3,
+          "chunk_id": "7661cda6-7dcd-4232-8d45-041a7206579b",
+          "doc_id": "PY-03",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.740536,
+          "gold_match": true
+        },
+        {
+          "rank": 4,
+          "chunk_id": "0e1a5e79-280e-40ff-b418-ab3f9ba1906f",
+          "doc_id": "PY-06",
+          "locator": {
+            "end": 29,
+            "type": "txt_line",
+            "start": 25
+          },
+          "similarity": 0.740113,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "da377d14-7ae1-432f-a2bf-5b3a87341b21",
+          "doc_id": "PY-06",
+          "locator": {
+            "end": 7,
+            "type": "txt_line",
+            "start": 1
+          },
+          "similarity": 0.703212,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "6aef8c13-206e-4a35-9837-524adc6cd542",
+          "doc_id": "PY-03",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.68656,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "094a4785-d46b-4bdf-b8c9-e195ef04adde",
+          "doc_id": "PY-02",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.656133,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "eb002887-bac8-4247-a10d-32a2aa17ff02",
+          "doc_id": "PY-03",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.654508,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-PY-06",
+      "course": "Python 程序设计",
+      "answerable": true,
+      "gold_sources": [
+        {
+          "doc_id": "PY-04",
+          "locator": {
+            "type": "pdf_page",
+            "start": 1,
+            "end": 1
+          }
+        },
+        {
+          "doc_id": "PY-03",
+          "locator": {
+            "type": "pdf_page",
+            "start": 2,
+            "end": 3
+          }
+        },
+        {
+          "doc_id": "PY-06",
+          "locator": {
+            "type": "txt_line",
+            "start": 27,
+            "end": 27
+          }
+        }
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "2f74575a-6ee3-45e5-a865-c2db274bdb32",
+          "doc_id": "PY-04",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.744589,
+          "gold_match": true
+        },
+        {
+          "rank": 2,
+          "chunk_id": "0e1a5e79-280e-40ff-b418-ab3f9ba1906f",
+          "doc_id": "PY-06",
+          "locator": {
+            "end": 29,
+            "type": "txt_line",
+            "start": 25
+          },
+          "similarity": 0.737646,
+          "gold_match": true
+        },
+        {
+          "rank": 3,
+          "chunk_id": "7661cda6-7dcd-4232-8d45-041a7206579b",
+          "doc_id": "PY-03",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.724934,
+          "gold_match": true
+        },
+        {
+          "rank": 4,
+          "chunk_id": "d45d2881-6da7-404e-83b6-e064b0b2bdd9",
+          "doc_id": "PY-03",
+          "locator": {
+            "end": 3,
+            "type": "pdf_page",
+            "start": 3
+          },
+          "similarity": 0.699296,
+          "gold_match": true
+        },
+        {
+          "rank": 5,
+          "chunk_id": "7892d8b2-dfc8-47d8-89a7-6e210a5e175a",
+          "doc_id": "PY-04",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.697589,
+          "gold_match": true
+        },
+        {
+          "rank": 6,
+          "chunk_id": "47049e19-dfec-4f32-9cd4-837dec3d21ed",
+          "doc_id": "PY-06",
+          "locator": {
+            "end": 21,
+            "type": "txt_line",
+            "start": 17
+          },
+          "similarity": 0.687482,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "eb002887-bac8-4247-a10d-32a2aa17ff02",
+          "doc_id": "PY-03",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.684589,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "dafe1ebd-0718-45c7-ab70-89db598fec4e",
+          "doc_id": "PY-04",
+          "locator": {
+            "end": 3,
+            "type": "pdf_page",
+            "start": 3
+          },
+          "similarity": 0.677085,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-PY-07",
+      "course": "Python 程序设计",
+      "answerable": false,
+      "gold_sources": [],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "454d06a0-45ec-4c68-9884-fb5be4758de5",
+          "doc_id": "PY-05",
+          "locator": {
+            "end": 4,
+            "type": "docx_paragraph",
+            "start": 1
+          },
+          "similarity": 0.628673,
+          "gold_match": false
+        },
+        {
+          "rank": 2,
+          "chunk_id": "5c3a4c05-eb3c-42d9-8905-a01dcbf231fe",
+          "doc_id": "PY-07",
+          "locator": {
+            "end": 7,
+            "type": "txt_line",
+            "start": 1
+          },
+          "similarity": 0.602342,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "ec00a0c9-4b66-4372-bce6-cebc6fe96699",
+          "doc_id": "PY-06",
+          "locator": {
+            "end": 29,
+            "type": "txt_line",
+            "start": 29
+          },
+          "similarity": 0.599228,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "0e8f8252-cd15-4872-96de-3c8bffc17be4",
+          "doc_id": "PY-07",
+          "locator": {
+            "end": 25,
+            "type": "txt_line",
+            "start": 19
+          },
+          "similarity": 0.596957,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "28d28138-e660-4e7a-b11e-aa68728db534",
+          "doc_id": "PY-01",
+          "locator": {
+            "end": 3,
+            "type": "docx_paragraph",
+            "start": 1
+          },
+          "similarity": 0.589842,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "b2cd61fe-36bc-484e-bfef-5d28d6047d08",
+          "doc_id": "PY-05",
+          "locator": {
+            "end": 14,
+            "type": "docx_paragraph",
+            "start": 11
+          },
+          "similarity": 0.561124,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "90a100ae-4d4e-4285-ac53-6628f7dbb41e",
+          "doc_id": "PY-08",
+          "locator": {
+            "end": 15,
+            "type": "docx_paragraph",
+            "start": 13
+          },
+          "similarity": 0.558793,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "df31bf5e-2f9a-4510-9625-bd15f8f1fbc4",
+          "doc_id": "PY-01",
+          "locator": {
+            "end": 8,
+            "type": "docx_paragraph",
+            "start": 6
+          },
+          "similarity": 0.54691,
+          "gold_match": false
+        }
+      ]
+    },
+    {
+      "question_id": "VAL-PY-08",
+      "course": "Python 程序设计",
+      "answerable": false,
+      "gold_sources": [],
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "d4d45327-6ef1-4b16-b2a9-3c540bb7087b",
+          "doc_id": "PY-04",
+          "locator": {
+            "end": 2,
+            "type": "pdf_page",
+            "start": 2
+          },
+          "similarity": 0.653342,
+          "gold_match": false
+        },
+        {
+          "rank": 2,
+          "chunk_id": "7892d8b2-dfc8-47d8-89a7-6e210a5e175a",
+          "doc_id": "PY-04",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.648123,
+          "gold_match": false
+        },
+        {
+          "rank": 3,
+          "chunk_id": "0e1a5e79-280e-40ff-b418-ab3f9ba1906f",
+          "doc_id": "PY-06",
+          "locator": {
+            "end": 29,
+            "type": "txt_line",
+            "start": 25
+          },
+          "similarity": 0.605397,
+          "gold_match": false
+        },
+        {
+          "rank": 4,
+          "chunk_id": "ec00a0c9-4b66-4372-bce6-cebc6fe96699",
+          "doc_id": "PY-06",
+          "locator": {
+            "end": 29,
+            "type": "txt_line",
+            "start": 29
+          },
+          "similarity": 0.598263,
+          "gold_match": false
+        },
+        {
+          "rank": 5,
+          "chunk_id": "2f74575a-6ee3-45e5-a865-c2db274bdb32",
+          "doc_id": "PY-04",
+          "locator": {
+            "end": 1,
+            "type": "pdf_page",
+            "start": 1
+          },
+          "similarity": 0.59793,
+          "gold_match": false
+        },
+        {
+          "rank": 6,
+          "chunk_id": "5d6d669a-6d0c-4c84-845e-6ad5ed217688",
+          "doc_id": "PY-08",
+          "locator": {
+            "end": 11,
+            "type": "docx_paragraph",
+            "start": 9
+          },
+          "similarity": 0.595997,
+          "gold_match": false
+        },
+        {
+          "rank": 7,
+          "chunk_id": "1a4a7eef-8d28-42ff-b9ba-bedc43bef00b",
+          "doc_id": "PY-06",
+          "locator": {
+            "end": 25,
+            "type": "txt_line",
+            "start": 21
+          },
+          "similarity": 0.571512,
+          "gold_match": false
+        },
+        {
+          "rank": 8,
+          "chunk_id": "a5c744e9-b097-48db-92ff-39761a40be06",
+          "doc_id": "PY-08",
+          "locator": {
+            "end": 9,
+            "type": "docx_paragraph",
+            "start": 6
+          },
+          "similarity": 0.565779,
+          "gold_match": false
+        }
+      ]
+    }
+  ]
+}
