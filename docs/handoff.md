@@ -40,18 +40,29 @@ M1–M4 已完成并推送到 GitHub `main`。系统能完整运行：上传、�
 | 后端 | `127.0.0.1:8000` |
 | 前端 | `127.0.0.1:5173`，`/api/v1` 代理到后端 |
 
-启动顺序（PowerShell 7）：
+启动方式（Windows PowerShell 5.1 和 PowerShell 7 都可以）：
+
+```powershell
+# 推荐：一键启动。检查并按需启动数据库，再各开一个窗口运行后端和前端（窗口出错不会自动关闭）。
+powershell -File .\scripts\start-all.ps1
+# 同时开启索引进程（审核通过的资料靠它变成"可用于问答"）：
+powershell -File .\scripts\start-all.ps1 -WithIndexer
+```
+
+也可以分别启动：
 
 ```powershell
 # 1. 数据库（重启电脑后需要；已在运行则跳过）
 & 'E:\scf-env\postgres\Library\bin\pg_ctl.exe' -D 'E:\scf-env\pgdata' -l 'E:\scf-env\postgres.log' -o '-h 127.0.0.1 -p 55432' -w start
 # 2. 后端（会先执行 alembic upgrade head）
-pwsh -File .\scripts\start-api.ps1
+.\scripts\start-api.ps1
 # 3. 前端
-pwsh -File .\scripts\start-web.ps1
-# 4. 索引进程（审核通过的资料要靠它变成"可用于问答"；--once 只处理一项）
-pwsh -File .\scripts\start-indexer.ps1 --once
+.\scripts\start-web.ps1
+# 4. 索引进程（--once 只处理一项）
+.\scripts\start-indexer.ps1 --once
 ```
+
+三个启动脚本和 `start-all.ps1` 都已加 UTF-8 BOM。此前不带 BOM 时，Windows PowerShell 5.1 会把中文字符串读错而报语法错误，表现为双击或"用 PowerShell 运行"时窗口一秒就关闭。**以后新增含中文的 `.ps1` 文件必须保存为带 BOM 的 UTF-8。**
 
 注意：
 
@@ -99,7 +110,7 @@ pwsh -File .\scripts\start-indexer.ps1 --once
 
 ## 已知问题与待办
 
-- `scripts/start-indexer.ps1` 在 Windows PowerShell 5.1 下报错，用 `pwsh`。可以给文件加 UTF-8 BOM 修复。脚本里还写死了 venv 路径。
+- 启动脚本里写死了 venv 路径 `E:\scf-env\venv\Scripts\python.exe`，换机器要改。（PowerShell 5.1 报错的问题已修复，见"环境与启动"。）
 - 证据门槛 0.40 偏低的迹象，M5 调参。
 - 云端错误映射（鉴权、余额不足、限流、超时）只有模拟测试。
 - 前端上传上限 20 MiB 写死在 `frontend/src/utils/resource.ts`。
@@ -108,3 +119,17 @@ pwsh -File .\scripts\start-indexer.ps1 --once
 - `.playwright-mcp/` 未加进 `.gitignore`。
 - 没有根目录 `README.md`（M6 必需）。
 - 本机测试库密码曾在一次失败诊断中显示过，未轮换。
+
+## 用户反馈与后续路线图（2026-11-26）
+
+用户看过 demo 后的评价：已有雏形，**功能数量偏少，界面太简陋**。用户明确要求：**先保证 demo 的主要功能正常开发完成，再做美化。** 下面是排好顺序的计划，尚未开工，开工前先和用户确认范围。
+
+| 顺序 | 事项 | 说明 |
+| --- | --- | --- |
+| 1 | M5 实验资料入库与题集 | 当前进行中。资料文件 `evaluation/course-materials.txt`（24 份）已通过格式检查，待转成真实文件并入库 |
+| 2 | 补全缺失的管理页面 | **用户管理**、**课程管理**两个页面仍是"建设中"占位页，后端接口和测试已就绪，只缺前端。答辩演示需要它们 |
+| 3 | 补充功能（候选，待用户挑选） | 计划里的 P1：个人问答历史、关键词与语义混合检索、重排。另可考虑：资源详情页的"相关问答"、批量审核、问答结果反馈（有用/没用）、资源版本说明。这些要先和用户确认再做，避免超出论文范围 |
+| 4 | M5 实验与 M6 演示准备 | 调参、对照实验、消融、README、答辩录屏 |
+| 5 | 前端美化 | 统一设计风格、首页改造、暗色模式、问答页体验、窄屏适配。放在主要功能完成之后，开工前先让用户选风格方向 |
+
+美化时的参照：动手前先读 `frontend/src` 现有组件（Element Plus，M2、M4 页面风格一致），改动要保持现有接口和路由不变。

@@ -30,7 +30,8 @@
 
 ## 环境要点
 
-- Windows 11，Shell 优先用 PowerShell 7（`pwsh`）。`scripts/start-indexer.ps1` 在 Windows PowerShell 5.1 下会因编码报语法错误，必须用 `pwsh -File`。
+- Windows 11，Shell 优先用 PowerShell 7（`pwsh`）。`.ps1` 脚本必须保存为**带 BOM 的 UTF-8**，否则含中文的脚本在 Windows PowerShell 5.1 下会报语法错误，双击运行时窗口会一秒关闭。新增含中文的 `.ps1` 文件要加 BOM。
+- 一键启动：`powershell -File .\scripts\start-all.ps1`（加 `-WithIndexer` 同时开索引进程）。
 - Python 虚拟环境：`E:\scf-env\venv\Scripts\python.exe`。运行处理下载数据的 Python 时加 `-I`。
 - PostgreSQL 16.15 + pgvector 0.8.6，监听 `127.0.0.1:55432`。开发库 `scf`，测试库 `scf_test`。
 - 嵌入模型 `BAAI/bge-small-zh-v1.5`（512 维，固定 revision `7999e1d3359715c523056ef9478215996d62a620`），离线缓存在 `E:\scf-env\hf-cache`。首次加载约 46–85 秒。

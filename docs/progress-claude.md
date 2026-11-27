@@ -4,7 +4,9 @@
 
 每条都区分"已验证"（亲自运行过）和"未验证"（只读过代码或依赖他人报告）。数字以实际运行输出为准。
 
-最后更新：2026-11-26（M4 完成后）
+最后更新：2026-11-26（M4 完成后，补一键启动脚本与用户对 demo 的反馈）
+
+用户反馈（2026-11-26）：demo 已有雏形，但功能偏少、界面简陋；要求先完成主要功能，再美化。排好顺序的路线图见 `docs/handoff.md` 的"用户反馈与后续路线图"。管理员的**用户管理**和**课程管理**两个页面仍是占位页，后端已就绪。
 
 ## 当前状态
 
@@ -144,7 +146,7 @@
 
 ## 已知问题与待办
 
-- **`scripts/start-indexer.ps1` 在 Windows PowerShell 5.1 下报语法错误**（`TerminatorExpectedAtEndOfString`）。文件是不带 BOM 的 UTF-8，里面有中文字符串，5.1 会按系统代码页读取而解析失败。用 PowerShell 7（`pwsh -File .\scripts\start-indexer.ps1`）运行正常。修法二选一：给文件加 UTF-8 BOM，或在文档里注明必须用 `pwsh`。
+- ~~`scripts/start-indexer.ps1` 在 Windows PowerShell 5.1 下报语法错误~~ **已修复（2026-11-26）**：三个启动脚本都加了 UTF-8 BOM，用 5.1 的解析器检查，3 个脚本的语法错误都是 0。这也是用户双击 `start-api.ps1` 窗口一秒关闭的原因。新增了 `scripts/start-all.ps1`（一键启动，窗口带 `-NoExit`），在 5.1 下实际运行过：数据库检查、后端和前端都起来了，经前端代理能访问接口。
 - `scripts/start-indexer.ps1` 写死了 `E:\scf-env\venv\Scripts\python.exe`，换机器要改。
 - 证据门槛 0.40 偏低的迹象（见 M4 相似度表），M5 调参。
 - 前端上传上限 20 MiB 写死在 `frontend/src/utils/resource.ts`，后端改 `MAX_UPLOAD_BYTES` 时要同步。
