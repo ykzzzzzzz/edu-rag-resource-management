@@ -1,0 +1,6 @@
+# 仅用于 scripts/build_materials.py 生成 PDF 样例资料，不属于后端运行依赖。
+# 安装：E:\scf-env\venv\Scripts\python.exe -m pip install -r scripts/requirements-materials.txt
+reportlab==5.1.2
+# reportlab 的传递依赖，一并固定版本
+pillow==13.0.0
+charset-normalizer==3.5.3

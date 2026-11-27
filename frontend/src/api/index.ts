@@ -2,8 +2,16 @@ import { API_PREFIX, request } from './http'
 import type {
   AdminResourceListQuery,
   AdminStats,
+  AdminUser,
+  AdminUserCreatePayload,
+  AdminUserList,
+  AdminUserListQuery,
+  AdminUserUpdatePayload,
   CitationDetail,
+  Course,
+  CourseCreatePayload,
   CourseList,
+  CourseUpdatePayload,
   CurrentUser,
   LoginRequest,
   MyResourceListQuery,
@@ -16,6 +24,7 @@ import type {
   ResourceListQuery,
   ResourceUpdatePayload,
   ResourceUploadPayload,
+  ResetPasswordPayload,
   ReviewPayload,
   SystemMode,
 } from './types'
@@ -60,6 +69,31 @@ export const api = {
   /** 课程列表（所有登录角色），按名称排序，不分页。 */
   listCourses(): Promise<CourseList> {
     return request<CourseList>('GET', '/courses')
+  },
+  /** 新建课程（仅管理员），成功返回 201；名称重复返回 409 course_name_taken。 */
+  createCourse(payload: CourseCreatePayload): Promise<Course> {
+    return request<Course>('POST', '/courses', payload)
+  },
+  /** 修改课程名称或描述（仅管理员）；description 传 null 清空。 */
+  updateCourse(id: string, payload: CourseUpdatePayload): Promise<Course> {
+    return request<Course>('PATCH', `/courses/${encodeURIComponent(id)}`, payload)
+  },
+
+  /** 用户列表（仅管理员），可按 role、is_active 筛选；后端不分页。 */
+  listUsers(query?: AdminUserListQuery): Promise<AdminUserList> {
+    return request<AdminUserList>('GET', withQuery('/admin/users', query))
+  },
+  /** 新建账号（仅管理员），成功返回 201；用户名重复返回 409 username_taken。 */
+  createUser(payload: AdminUserCreatePayload): Promise<AdminUser> {
+    return request<AdminUser>('POST', '/admin/users', payload)
+  },
+  /** 修改显示名、角色、启用状态（仅管理员）；停用会撤销该用户全部会话。 */
+  updateUser(id: string, payload: AdminUserUpdatePayload): Promise<AdminUser> {
+    return request<AdminUser>('PATCH', `/admin/users/${encodeURIComponent(id)}`, payload)
+  },
+  /** 重置密码并撤销该用户全部会话，成功返回 204。 */
+  resetUserPassword(id: string, payload: ResetPasswordPayload): Promise<void> {
+    return request<void>('POST', `/admin/users/${encodeURIComponent(id)}/reset-password`, payload)
   },
 
   /** 已发布资源列表。 */

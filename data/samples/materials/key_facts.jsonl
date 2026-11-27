@@ -1,0 +1,250 @@
+{"doc_id": "DB-01", "fact_no": 1, "text": "启明教育培训中心在 2026 年秋季学期通过启明学堂开设《数据库原理》。", "locator": {"type": "docx_paragraph", "start": 2, "end": 2}}
+{"doc_id": "DB-01", "fact_no": 2, "text": "本课程安排在第 1 至第 14 周，共 56 学时，其中讲授 32 学时、实验 24 学时。", "locator": {"type": "docx_paragraph", "start": 3, "end": 3}}
+{"doc_id": "DB-01", "fact_no": 3, "text": "讲义第一部分对应第 1 至第 4 周，第二部分对应第 5 至第 9 周，第三部分对应第 10 至第 14 周。", "locator": {"type": "docx_paragraph", "start": 4, "end": 4}}
+{"doc_id": "DB-01", "fact_no": 4, "text": "课程总评由平时作业、实验和期末笔试构成，权重依次为 20%、35% 和 45%。", "locator": {"type": "docx_paragraph", "start": 6, "end": 6}}
+{"doc_id": "DB-01", "fact_no": 5, "text": "期末笔试的卷面满分和换算办法见复习提纲，复核总评时应保留各单项的换算过程，便于查明分数差异出在哪一步。", "locator": {"type": "docx_paragraph", "start": 6, "end": 6}}
+{"doc_id": "DB-01", "fact_no": 6, "text": "平时作业共 4 次，每次满分 100 分，等权取平均后计入总评。", "locator": {"type": "docx_paragraph", "start": 7, "end": 7}}
+{"doc_id": "DB-01", "fact_no": 7, "text": "实验共 3 项，实验合成分按实验指导书规定的各项目原始满分汇总。", "locator": {"type": "docx_paragraph", "start": 8, "end": 8}}
+{"doc_id": "DB-01", "fact_no": 8, "text": "总评保留一位小数，四舍五入后的总评达到 60.0 分即为及格。", "locator": {"type": "docx_paragraph", "start": 8, "end": 8}}
+{"doc_id": "DB-01", "fact_no": 9, "text": "每项实验通过启明学堂的对应入口提交，最终以入口关闭前最后一次成功提交的版本为准。", "locator": {"type": "docx_paragraph", "start": 10, "end": 10}}
+{"doc_id": "DB-01", "fact_no": 10, "text": "平时作业和实验自原截止时刻起，迟交不超过 24 小时扣该项原始满分的 8%，超过 24 小时且不超过 48 小时扣该项原始满分的 16%，超过 48 小时记 0 分。", "locator": {"type": "docx_paragraph", "start": 11, "end": 11}}
+{"doc_id": "DB-01", "fact_no": 11, "text": "迟交按平台记录的成功提交时刻判定，扣分后最低记 0 分。", "locator": {"type": "docx_paragraph", "start": 11, "end": 11}}
+{"doc_id": "DB-01", "fact_no": 12, "text": "一般请假应在开课前至少 6 小时通过启明学堂提交申请。", "locator": {"type": "docx_paragraph", "start": 13, "end": 13}}
+{"doc_id": "DB-01", "fact_no": 13, "text": "累计有 3 次实验课未获准缺席的学员不具备本学期期末笔试资格。", "locator": {"type": "docx_paragraph", "start": 13, "end": 13}}
+{"doc_id": "DB-01", "fact_no": 14, "text": "总评未达及格线且具备考试资格的学员可参加一次补考，补考于结课后第 2 周周六 09:30 举行。", "locator": {"type": "docx_paragraph", "start": 14, "end": 14}}
+{"doc_id": "DB-01", "fact_no": 15, "text": "补考笔试按百分制评定，达到 60 分后，课程总评记为 60.0 分。", "locator": {"type": "docx_paragraph", "start": 14, "end": 14}}
+{"doc_id": "DB-02", "fact_no": 1, "text": "本讲义用于启明学堂《数据库原理》第 1 至第 4 周的学习，入门案例取自木槿借阅角。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "DB-02", "fact_no": 2, "text": "纸面登记样本共有 18 张，其中 16 张是有效登记单。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "DB-02", "fact_no": 3, "text": "木槿借阅角的录入练习收入 12 条借用记录，涉及 7 个借用者编号和 9 个器材编号。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "DB-02", "fact_no": 4, "text": "木槿借阅角的器材编号由 MJJ 后接三位数字构成。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "DB-02", "fact_no": 5, "text": "木槿借阅角器材 MJJ014 的名称是描图灯板，账面数量为 4 件。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "DB-02", "fact_no": 6, "text": "木槿借阅角器材 MJJ027 的名称是折叠画架，账面数量为 6 件。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "DB-02", "fact_no": 7, "text": "借用者 L006 的两条归还记录对应的归还日期分别是 2026 年 9 月 18 日和 9 月 22 日。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "DB-02", "fact_no": 8, "text": "木槿借阅角的核对样例中有 3 条记录缺少归还日期。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "DB-02", "fact_no": 9, "text": "供课堂核对的样例档案编号为 MJ-S04，其中包含借用记录 B012。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "DB-03", "fact_no": 1, "text": "第二部分采用栖砾器材周转点的教学快照 S102，快照统计日为 2026 年 10 月 1 日。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "DB-03", "fact_no": 2, "text": "S102 的器材档案以器材代号为主键，借用档案以借用单号为主键，归还登记允许同一借用单号对应多次点验。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "DB-03", "fact_no": 3, "text": "S102 的月末筛选采用领出日期，9 月批的范围从 9 月 1 日起至 10 月 1 日之前。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "DB-03", "fact_no": 4, "text": "周转点的教学计费口径只承认状态为“已归还”且签收标志为“是”的借用单。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "DB-03", "fact_no": 5, "text": "有效借用以领出当日为第一日，实际全部收回的日期不计费，有效借用的首日免收周转费。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "DB-03", "fact_no": 6, "text": "栖砾器材周转点的教学费率为每件每个计费日 3 元。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "DB-03", "fact_no": 7, "text": "S102 中 A31 代表折页展架，A42 代表砂纹滑轨，A58 代表圆角底座。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "DB-03", "fact_no": 8, "text": "S102 的归还点验采用借用单号和点验序号联合标识，序号从各借用单内的 1 开始。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "DB-03", "fact_no": 9, "text": "栖砾器材周转点把 S102 的清单复核记录归入档案 QL-R17。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "DB-04", "fact_no": 1, "text": "第三部分使用栖砾器材周转点的 S102 基础快照，演示分支编号为 QL-T03。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "DB-04", "fact_no": 2, "text": "S102 中折页展架 A31 的账面总量为 12 件，可借量为 5 件。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "DB-04", "fact_no": 3, "text": "QL-T03 第一轮模拟为活动组 G08 预领 4 件 A31，拟用单号 T401。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "DB-04", "fact_no": 4, "text": "QL-T03 第二轮保留同一初始可借量，让会话甲申请 4 件，会话乙申请 3 件。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "DB-04", "fact_no": 5, "text": "第二轮中，会话甲使用拟用单号 T411，会话乙使用拟用单号 T412。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "DB-04", "fact_no": 6, "text": "QL-T03 第三轮使用器材 A42，专门演示库存扣减成功后借用单号冲突的情况。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "DB-04", "fact_no": 7, "text": "第三轮预占单号为 T430，回滚后的库存复核基准为 7 件可借。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "DB-04", "fact_no": 8, "text": "第三部分的变更复核记录存入档案 QL-R23。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "DB-04", "fact_no": 9, "text": "QL-R23 的复核顺序是会话甲、会话乙、库存复查。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "DB-04", "fact_no": 10, "text": "第三部分综合演示结束时，学员以基础快照和演示分支各导出一次库存读数。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "DB-05", "fact_no": 1, "text": "数据库实验以 PostgreSQL 16 和 psql 命令行客户端为统一复核环境。", "locator": {"type": "docx_paragraph", "start": 2, "end": 2}}
+{"doc_id": "DB-05", "fact_no": 2, "text": "三个实验分别提交到启明学堂的“器材登记”“借用核对”和“库存并发更新”入口。", "locator": {"type": "docx_paragraph", "start": 3, "end": 3}}
+{"doc_id": "DB-05", "fact_no": 3, "text": "实验一采用木槿借阅角录入样本，预约实验时段安排在第 3 周。", "locator": {"type": "docx_paragraph", "start": 5, "end": 5}}
+{"doc_id": "DB-05", "fact_no": 4, "text": "实验一原始满分为 25 分，模式与主键 8 分、外键与拒绝写入证据 9 分、样本核对 8 分。", "locator": {"type": "docx_paragraph", "start": 6, "end": 6}}
+{"doc_id": "DB-05", "fact_no": 5, "text": "实验一截止于第 4 周周三 20:00，提交包名由 DBL1、连字符和学员实验代号组成。", "locator": {"type": "docx_paragraph", "start": 6, "end": 6}}
+{"doc_id": "DB-05", "fact_no": 6, "text": "实验二在第 7 周使用栖砾器材周转点 S102 快照开始。", "locator": {"type": "docx_paragraph", "start": 8, "end": 8}}
+{"doc_id": "DB-05", "fact_no": 7, "text": "实验二原始满分为 35 分，连接与去重 12 分、日期与计费口径 15 分、核对记录 8 分。", "locator": {"type": "docx_paragraph", "start": 9, "end": 9}}
+{"doc_id": "DB-05", "fact_no": 8, "text": "实验二截止于第 9 周周四 19:30，提交包名由 DBL2、连字符和学员实验代号组成。", "locator": {"type": "docx_paragraph", "start": 9, "end": 9}}
+{"doc_id": "DB-05", "fact_no": 9, "text": "实验三在第 11 周开始，连接需要同时打开两个独立 psql 会话。", "locator": {"type": "docx_paragraph", "start": 11, "end": 11}}
+{"doc_id": "DB-05", "fact_no": 10, "text": "实验三原始满分为 40 分，原子更新与回滚 14 分、双会话记录 16 分、库存复核 10 分。", "locator": {"type": "docx_paragraph", "start": 12, "end": 12}}
+{"doc_id": "DB-05", "fact_no": 11, "text": "实验三截止于第 12 周周五 18:00，提交包名由 DBL3、连字符和学员实验代号组成。", "locator": {"type": "docx_paragraph", "start": 12, "end": 12}}
+{"doc_id": "DB-05", "fact_no": 12, "text": "本课程的运行记录依次保留准备、执行、复查三个环节，由教师按该顺序复核。", "locator": {"type": "docx_paragraph", "start": 15, "end": 15}}
+{"doc_id": "DB-06", "fact_no": 1, "text": "栖砾器材周转点教学快照编号为 S102，统计日为 2026 年 10 月 1 日。", "locator": {"type": "txt_line", "start": 3, "end": 3}}
+{"doc_id": "DB-06", "fact_no": 2, "text": "器材记录 A31 的名称为折页展架，账面总量为 12 件，基础快照可借量为 5 件。", "locator": {"type": "txt_line", "start": 5, "end": 5}}
+{"doc_id": "DB-06", "fact_no": 3, "text": "器材记录 A42 的名称为砂纹滑轨，账面总量为 10 件，基础快照可借量为 7 件。", "locator": {"type": "txt_line", "start": 5, "end": 5}}
+{"doc_id": "DB-06", "fact_no": 4, "text": "器材记录 A58 的名称为圆角底座，账面总量为 9 件，基础快照可借量为 6 件。", "locator": {"type": "txt_line", "start": 5, "end": 5}}
+{"doc_id": "DB-06", "fact_no": 5, "text": "借用单 L301 记录活动组 G12 于 9 月 23 日领出 3 件 A31，状态为“已归还”，签收标志为“是”。", "locator": {"type": "txt_line", "start": 9, "end": 9}}
+{"doc_id": "DB-06", "fact_no": 6, "text": "借用单 L302 记录活动组 G03 于 9 月 29 日领出 2 件 A42，状态为“已归还”，签收标志为“否”。", "locator": {"type": "txt_line", "start": 9, "end": 9}}
+{"doc_id": "DB-06", "fact_no": 7, "text": "借用单 L303 记录活动组 G12 于 9 月 30 日领出 3 件 A58，状态为“借用中”，签收标志为“否”。", "locator": {"type": "txt_line", "start": 11, "end": 11}}
+{"doc_id": "DB-06", "fact_no": 8, "text": "借用单 L304 记录活动组 G18 预约于 10 月 1 日领出 1 件 A31，状态为“已取消”，签收标志为“否”。", "locator": {"type": "txt_line", "start": 11, "end": 11}}
+{"doc_id": "DB-06", "fact_no": 9, "text": "L301 的第 1 笔点验在 9 月 24 日收回 1 件，第 2 笔点验在 9 月 26 日收回 2 件。", "locator": {"type": "txt_line", "start": 15, "end": 15}}
+{"doc_id": "DB-06", "fact_no": 10, "text": "L302 的第 1 笔点验在 9 月 30 日收回 2 件，L303 和 L304 在快照内均无点验记录。", "locator": {"type": "txt_line", "start": 17, "end": 17}}
+{"doc_id": "DB-06", "fact_no": 11, "text": "S102 的档案记录类别依次为器材档案、借用档案、归还点验，课堂清单分别有 3、4、3 条记录。", "locator": {"type": "txt_line", "start": 23, "end": 23}}
+{"doc_id": "DB-06", "fact_no": 12, "text": "点验联合主键的字段顺序是借用单号、点验序号，点验序号在每个借用单内从 1 开始。", "locator": {"type": "txt_line", "start": 25, "end": 25}}
+{"doc_id": "DB-06", "fact_no": 13, "text": "教学快照 S102 的基础核对清单存于 QL-R17。", "locator": {"type": "txt_line", "start": 27, "end": 27}}
+{"doc_id": "DB-07", "fact_no": 1, "text": "《数据库原理》在启明学堂开设，第 1 至第 4 周先读讲义第一部分。", "locator": {"type": "txt_line", "start": 3, "end": 3}}
+{"doc_id": "DB-07", "fact_no": 2, "text": "本课程的 4 次平时作业按同一权重计算平均分。", "locator": {"type": "txt_line", "start": 7, "end": 7}}
+{"doc_id": "DB-07", "fact_no": 3, "text": "数据库实验统一使用 PostgreSQL 16 和 psql 客户端进行复核。", "locator": {"type": "txt_line", "start": 11, "end": 11}}
+{"doc_id": "DB-07", "fact_no": 4, "text": "每项实验以启明学堂对应入口关闭前最后一次成功提交的版本为准。", "locator": {"type": "txt_line", "start": 15, "end": 15}}
+{"doc_id": "DB-07", "fact_no": 5, "text": "实验一“器材登记”截止于第 4 周周三 20:00。", "locator": {"type": "txt_line", "start": 19, "end": 19}}
+{"doc_id": "DB-07", "fact_no": 6, "text": "实验二“借用核对”使用 S102 快照，并在第 9 周周四 19:30 截止。", "locator": {"type": "txt_line", "start": 23, "end": 23}}
+{"doc_id": "DB-07", "fact_no": 7, "text": "实验三“库存并发更新”截止于第 12 周周五 18:00。", "locator": {"type": "txt_line", "start": 27, "end": 27}}
+{"doc_id": "DB-07", "fact_no": 8, "text": "本课程作业和实验迟交不超过 24 小时扣该项原始满分的 8%，超过 24 小时且不超过 48 小时扣 16%，超过 48 小时记 0 分。", "locator": {"type": "txt_line", "start": 31, "end": 31}}
+{"doc_id": "DB-07", "fact_no": 9, "text": "累计有 3 次实验课未获准缺席的学员不具备本学期期末笔试资格。", "locator": {"type": "txt_line", "start": 35, "end": 35}}
+{"doc_id": "DB-07", "fact_no": 10, "text": "本课程期末笔试占总评的 45%。", "locator": {"type": "txt_line", "start": 39, "end": 39}}
+{"doc_id": "DB-08", "fact_no": 1, "text": "本课程期末笔试使用卷面代号 DB-F26，考试时长为 105 分钟。", "locator": {"type": "docx_paragraph", "start": 2, "end": 2}}
+{"doc_id": "DB-08", "fact_no": 2, "text": "卷面满分为 120 分，先将实际卷面分除以 120，再乘以 100，得到用于计算总评的百分制笔试分。", "locator": {"type": "docx_paragraph", "start": 3, "end": 3}}
+{"doc_id": "DB-08", "fact_no": 3, "text": "期末笔试题型依次为概念辨析、关系模式与约束、查询分析、事务综合，四类满分依次是 24、36、36、24 分。", "locator": {"type": "docx_paragraph", "start": 4, "end": 4}}
+{"doc_id": "DB-08", "fact_no": 4, "text": "概念辨析安排 6 个小项，每项 4 分。", "locator": {"type": "docx_paragraph", "start": 6, "end": 6}}
+{"doc_id": "DB-08", "fact_no": 5, "text": "关系模式与约束部分设 2 项，每项 18 分。", "locator": {"type": "docx_paragraph", "start": 7, "end": 7}}
+{"doc_id": "DB-08", "fact_no": 6, "text": "查询分析部分设 3 项，每项 12 分。", "locator": {"type": "docx_paragraph", "start": 9, "end": 9}}
+{"doc_id": "DB-08", "fact_no": 7, "text": "事务综合部分设 1 项，满分 24 分。", "locator": {"type": "docx_paragraph", "start": 10, "end": 10}}
+{"doc_id": "DB-08", "fact_no": 8, "text": "DB-F26 的查询书写可以采用清晰的通用 SQL，对同一查询接受语义等价的写法。", "locator": {"type": "docx_paragraph", "start": 13, "end": 13}}
+{"doc_id": "DB-08", "fact_no": 9, "text": "DB-F26 不考数据库安装命令、物理存储结构计算和厂商专有的管理指令。", "locator": {"type": "docx_paragraph", "start": 14, "end": 14}}
+{"doc_id": "NET-01", "fact_no": 1, "text": "启明教育培训中心在 2026 年秋季学期通过启明学堂开设《计算机网络》。", "locator": {"type": "docx_paragraph", "start": 2, "end": 2}}
+{"doc_id": "NET-01", "fact_no": 2, "text": "全课程从第 1 周开到第 15 周，共 60 学时，其中讲授 36 学时、实验 24 学时。", "locator": {"type": "docx_paragraph", "start": 3, "end": 3}}
+{"doc_id": "NET-01", "fact_no": 3, "text": "三部分讲义分别用于第 1 至第 4 周、第 5 至第 10 周、第 11 至第 15 周。", "locator": {"type": "docx_paragraph", "start": 4, "end": 4}}
+{"doc_id": "NET-01", "fact_no": 4, "text": "平时作业、实验和期末笔试分别占课程总评的 26%、30% 和 44%。", "locator": {"type": "docx_paragraph", "start": 6, "end": 6}}
+{"doc_id": "NET-01", "fact_no": 5, "text": "平时作业共 5 次，均按百分制评分，去掉最低一次后，对其余 4 次取算术平均分。", "locator": {"type": "docx_paragraph", "start": 7, "end": 7}}
+{"doc_id": "NET-01", "fact_no": 6, "text": "课程安排 3 项实验，三项实际得分相加得到百分制实验合成分。", "locator": {"type": "docx_paragraph", "start": 8, "end": 8}}
+{"doc_id": "NET-01", "fact_no": 7, "text": "课程总评保留一位小数，四舍五入后达到 62.0 分为及格。", "locator": {"type": "docx_paragraph", "start": 8, "end": 8}}
+{"doc_id": "NET-01", "fact_no": 8, "text": "实验迟交在原截止时刻后 36 小时内按每开始一个 12 小时档扣原始得分 3 分，扣后最低为 0 分。", "locator": {"type": "docx_paragraph", "start": 10, "end": 10}}
+{"doc_id": "NET-01", "fact_no": 9, "text": "实验迟交超过 36 小时记 0 分，平时作业逾期也记 0 分。", "locator": {"type": "docx_paragraph", "start": 10, "end": 10}}
+{"doc_id": "NET-01", "fact_no": 10, "text": "实验课一般请假应提前至少 12 小时通过启明学堂提交，并注明拟缺席的实验时段。", "locator": {"type": "docx_paragraph", "start": 11, "end": 11}}
+{"doc_id": "NET-01", "fact_no": 11, "text": "未经批准缺席的实验累计达到 4 学时，学员不具备本学期期末笔试资格。", "locator": {"type": "docx_paragraph", "start": 11, "end": 11}}
+{"doc_id": "NET-01", "fact_no": 12, "text": "总评未及格且具备考试资格的学员可参加一次补考，补考在结课后第 3 周周日 14:00 举行。", "locator": {"type": "docx_paragraph", "start": 12, "end": 12}}
+{"doc_id": "NET-01", "fact_no": 13, "text": "补考笔试百分制成绩达到 65 分时，课程总评记为 62.0 分。", "locator": {"type": "docx_paragraph", "start": 12, "end": 12}}
+{"doc_id": "NET-02", "fact_no": 1, "text": "本讲义对应第 1 至第 4 周，课堂示例采用雾槐展务台的拓扑 WHE-04。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "NET-02", "fact_no": 2, "text": "WHE-04 的前台 F01 使用 192.0.2.21，前台 F02 使用 192.0.2.22，两者的掩码长度均为 26 位。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "NET-02", "fact_no": 3, "text": "WHE-04 前台网段的默认网关是 192.0.2.1，课堂使用的解析节点是 198.51.100.53。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "NET-02", "fact_no": 4, "text": "前台 F01 连接到交换机 SW-A 的 P03 接口，F02 连接到 P07 接口。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "NET-02", "fact_no": 5, "text": "WHE-04 的出口设备编号为 GW-A，SW-A 的上联观察口编号为 P18。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "NET-02", "fact_no": 6, "text": "入门演示在帧发出前后分别保存一次 SW-A 的学习记录，档案编号是 WH-L12。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "NET-02", "fact_no": 7, "text": "入门观察清单 WH-L12 的起始读数取自 F01，第二观察点设在 SW-A 的 P18。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "NET-02", "fact_no": 8, "text": "雾槐展务台的采集练习用工单 WH-T06，工单回看顺序是配置、端口、转发。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "NET-02", "fact_no": 9, "text": "WHE-04 入门复核统一使用课内基线副本 WH-B02。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "NET-03", "fact_no": 1, "text": "第二部分采用隙岚展运站快照 XL-N28，教学采集日为 2026 年 10 月 20 日。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "NET-03", "fact_no": 2, "text": "XL-N28 的终端名为 TS-04，读取服务名为 JS-2，课程把两条测量路径记作 S1 和 S2。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "NET-03", "fact_no": 3, "text": "本节的连接读数统一归入档案 XL-C16，检查顺序为客户端发出、服务端应答、客户端确认。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "NET-03", "fact_no": 4, "text": "XL-N28 的 S1 和 S2 每轮都发出 5 次探测，两次连续发出的探测相隔 1 秒。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "NET-03", "fact_no": 5, "text": "可用于延迟判定的往返时延取有应答样本排序后的中位数，偶数个有效样本取中间两项的平均值。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "NET-03", "fact_no": 6, "text": "隙岚展运站课堂告警要求中位数达到 45 毫秒时记延迟告警，一轮出现至少 2 次无应答时另记可达性告警。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "NET-03", "fact_no": 7, "text": "课堂测量复核单编号为 XL-M09，它把连接观察和探测读数分别归档。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "NET-03", "fact_no": 8, "text": "路径 S2 设有中继 CL-6 作为教学观察点，路径 S1 的中间观察点标作 CL-2。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "NET-03", "fact_no": 9, "text": "进阶复核提交按“轮次、路径、样本、判断”四个字段的顺序写，统一保存到 XL-M09。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "NET-04", "fact_no": 1, "text": "隙岚展运站综合演示使用分支 XL-D06，起点取自只读基线 XL-N28。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "NET-04", "fact_no": 2, "text": "综合演示回看顺序固定为客户端、出口、服务端。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "NET-04", "fact_no": 3, "text": "XL-D06 初始读取任务使用终端 TS-04 和服务 JS-2，第一轮时点标签为 D6-A。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "NET-04", "fact_no": 4, "text": "XL-D06 第二轮使用时点标签 D6-B，课堂只改变终端的解析节点设置。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "NET-04", "fact_no": 5, "text": "在 D6-B，出口旁路观察点标作 OUT-3，并保留该轮终端发出时的记录。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "NET-04", "fact_no": 6, "text": "D6-B 的服务端观察记录存入 XL-V21，课程复盘末尾用该档案核对出口侧记录。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "NET-04", "fact_no": 7, "text": "XL-D06 第三轮采用时点标签 D6-C，终端配置恢复到基线后才重新读取服务。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "NET-04", "fact_no": 8, "text": "综合报告按时点标签关联记录，同一轮的客户端、出口和服务端各写一次读数。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "NET-04", "fact_no": 9, "text": "XL-D06 的综合报告归入档案 XL-R31，末尾附复测时的配置读数。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "NET-05", "fact_no": 1, "text": "计算机网络实验统一使用 Packet Tracer 8.2 和课程提供的离线抓包文本。", "locator": {"type": "docx_paragraph", "start": 2, "end": 2}}
+{"doc_id": "NET-05", "fact_no": 2, "text": "三个实验的启明学堂提交入口分别名为“链路初查”“连接与测量”和“三点复盘”。", "locator": {"type": "docx_paragraph", "start": 3, "end": 3}}
+{"doc_id": "NET-05", "fact_no": 3, "text": "实验一在第 4 周开始，使用雾槐展务台拓扑 WHE-04 和入门副本 WH-B02。", "locator": {"type": "docx_paragraph", "start": 5, "end": 5}}
+{"doc_id": "NET-05", "fact_no": 4, "text": "实验一原始满分 30 分，其中终端配置核对 10 分、帧与端口读数 12 分、转发解释 8 分。", "locator": {"type": "docx_paragraph", "start": 6, "end": 6}}
+{"doc_id": "NET-05", "fact_no": 5, "text": "实验一截止于第 5 周周一 19:00，提交包名由 NWL1、连字符和实验代号组成。", "locator": {"type": "docx_paragraph", "start": 6, "end": 6}}
+{"doc_id": "NET-05", "fact_no": 6, "text": "实验二在第 8 周开始，使用进阶快照 XL-N28 的连接和探测档案。", "locator": {"type": "docx_paragraph", "start": 8, "end": 8}}
+{"doc_id": "NET-05", "fact_no": 7, "text": "实验二原始满分 30 分，其中连接识别 10 分、样本与统计 12 分、告警依据 8 分。", "locator": {"type": "docx_paragraph", "start": 9, "end": 9}}
+{"doc_id": "NET-05", "fact_no": 8, "text": "实验二截止于第 10 周周三 21:00，提交包名由 NWL2、连字符和实验代号组成。", "locator": {"type": "docx_paragraph", "start": 9, "end": 9}}
+{"doc_id": "NET-05", "fact_no": 9, "text": "实验三于第 12 周开始，使用综合演示分支 XL-D06。", "locator": {"type": "docx_paragraph", "start": 11, "end": 11}}
+{"doc_id": "NET-05", "fact_no": 10, "text": "实验三原始满分 40 分，其中分支与配置 10 分、跨点匹配 18 分、复测与说明 12 分。", "locator": {"type": "docx_paragraph", "start": 12, "end": 12}}
+{"doc_id": "NET-05", "fact_no": 11, "text": "实验三截止于第 14 周周四 20:30，提交包名由 NWL3、连字符和实验代号组成。", "locator": {"type": "docx_paragraph", "start": 12, "end": 12}}
+{"doc_id": "NET-05", "fact_no": 12, "text": "每个实验报告的正文均依次写环境、操作、观察、结论。", "locator": {"type": "docx_paragraph", "start": 15, "end": 15}}
+{"doc_id": "NET-06", "fact_no": 1, "text": "隙岚展运站基础快照 XL-N28 的教学采集日为 2026 年 10 月 20 日。", "locator": {"type": "txt_line", "start": 3, "end": 3}}
+{"doc_id": "NET-06", "fact_no": 2, "text": "终端 TS-04 的地址为 192.0.2.86，掩码长度为 27 位，默认网关为 192.0.2.65。", "locator": {"type": "txt_line", "start": 7, "end": 7}}
+{"doc_id": "NET-06", "fact_no": 3, "text": "读取服务 JS-2 使用 203.0.113.42 的 8443 端口，基线解析节点为 198.51.100.61。", "locator": {"type": "txt_line", "start": 7, "end": 7}}
+{"doc_id": "NET-06", "fact_no": 4, "text": "XL-N28 将第一条探测路径记作 S1，中间观察点为 CL-2，第二条记作 S2，中继观察点为 CL-6。", "locator": {"type": "txt_line", "start": 9, "end": 9}}
+{"doc_id": "NET-06", "fact_no": 5, "text": "档案 XL-C16 的样例连接标为 C160，发起端使用 TS-04 的 49172 端口。", "locator": {"type": "txt_line", "start": 13, "end": 13}}
+{"doc_id": "NET-06", "fact_no": 6, "text": "C160 的三条连接记录依次为相对时刻 0 毫秒发起端发出同步、21 毫秒发起端收到同步确认、22 毫秒发起端发出确认。", "locator": {"type": "txt_line", "start": 13, "end": 13}}
+{"doc_id": "NET-06", "fact_no": 7, "text": "S1 的轮次 M091 在发起端依次记录为 39 毫秒、44 毫秒、45 毫秒、53 毫秒和无应答。", "locator": {"type": "txt_line", "start": 17, "end": 17}}
+{"doc_id": "NET-06", "fact_no": 8, "text": "S2 的轮次 M092 在发起端依次记录为 50 毫秒、无应答、61 毫秒、无应答和 43 毫秒。", "locator": {"type": "txt_line", "start": 19, "end": 19}}
+{"doc_id": "NET-06", "fact_no": 9, "text": "M091 的第一条探测记录在相对时刻 0 秒发出，M092 的第一条在相对时刻 10 秒发出，两轮各自每秒发出一条。", "locator": {"type": "txt_line", "start": 21, "end": 21}}
+{"doc_id": "NET-06", "fact_no": 10, "text": "探测原始记录归入档案 XL-M09，连接原始记录归入档案 XL-C16。", "locator": {"type": "txt_line", "start": 29, "end": 29}}
+{"doc_id": "NET-06", "fact_no": 11, "text": "综合演示使用从 XL-N28 复制的分支 XL-D06，分支变更另存随堂记录。", "locator": {"type": "txt_line", "start": 31, "end": 31}}
+{"doc_id": "NET-07", "fact_no": 1, "text": "入门实验从第 4 周开始，使用雾槐展务台拓扑 WHE-04 和基线副本 WH-B02。", "locator": {"type": "txt_line", "start": 3, "end": 3}}
+{"doc_id": "NET-07", "fact_no": 2, "text": "第三部分讲义从第 11 周使用到第 15 周。", "locator": {"type": "txt_line", "start": 7, "end": 7}}
+{"doc_id": "NET-07", "fact_no": 3, "text": "五次百分制作业中，去掉最低的一次后，其余四次取算术平均分。", "locator": {"type": "txt_line", "start": 11, "end": 11}}
+{"doc_id": "NET-07", "fact_no": 4, "text": "课程实验使用 Packet Tracer 8.2 和离线抓包文本。", "locator": {"type": "txt_line", "start": 15, "end": 15}}
+{"doc_id": "NET-07", "fact_no": 5, "text": "实验一提交到启明学堂的“链路初查”入口，截止于第 5 周周一 19:00。", "locator": {"type": "txt_line", "start": 19, "end": 19}}
+{"doc_id": "NET-07", "fact_no": 6, "text": "实验二“连接与测量”截止于第 10 周周三 21:00。", "locator": {"type": "txt_line", "start": 23, "end": 23}}
+{"doc_id": "NET-07", "fact_no": 7, "text": "实验迟交不超过 36 小时，按每开始一个 12 小时档扣原始得分 3 分。", "locator": {"type": "txt_line", "start": 27, "end": 27}}
+{"doc_id": "NET-07", "fact_no": 8, "text": "迟交超过 36 小时的实验和逾期的平时作业均记 0 分。", "locator": {"type": "txt_line", "start": 27, "end": 27}}
+{"doc_id": "NET-07", "fact_no": 9, "text": "若扣完为负分，则按 0 分登记。", "locator": {"type": "txt_line", "start": 27, "end": 27}}
+{"doc_id": "NET-07", "fact_no": 10, "text": "实验课一般请假须通过启明学堂提前至少 12 小时提交。", "locator": {"type": "txt_line", "start": 31, "end": 31}}
+{"doc_id": "NET-07", "fact_no": 11, "text": "期末笔试使用卷面 NET-F26，满分 80 分。", "locator": {"type": "txt_line", "start": 35, "end": 35}}
+{"doc_id": "NET-07", "fact_no": 12, "text": "符合补考条件的学员可参加一次补考，时间为结课后第 3 周周日 14:00。", "locator": {"type": "txt_line", "start": 39, "end": 39}}
+{"doc_id": "NET-08", "fact_no": 1, "text": "期末笔试卷面代号为 NET-F26，卷面满分 80 分，考试时长 95 分钟。", "locator": {"type": "docx_paragraph", "start": 2, "end": 2}}
+{"doc_id": "NET-08", "fact_no": 2, "text": "将实际卷面分除以 80 再乘以 100，得到计算总评所用的百分制笔试分。", "locator": {"type": "docx_paragraph", "start": 3, "end": 3}}
+{"doc_id": "NET-08", "fact_no": 3, "text": "卷面四类题型是协议概念、地址和路径、报文与连接、综合定位，满分依次为 16、20、24、20 分。", "locator": {"type": "docx_paragraph", "start": 4, "end": 4}}
+{"doc_id": "NET-08", "fact_no": 4, "text": "协议概念设 8 小项，每小项 2 分。", "locator": {"type": "docx_paragraph", "start": 6, "end": 6}}
+{"doc_id": "NET-08", "fact_no": 5, "text": "地址和路径设 2 项，每项 10 分。", "locator": {"type": "docx_paragraph", "start": 7, "end": 7}}
+{"doc_id": "NET-08", "fact_no": 6, "text": "报文与连接设 3 项，每项 8 分。", "locator": {"type": "docx_paragraph", "start": 9, "end": 9}}
+{"doc_id": "NET-08", "fact_no": 7, "text": "综合定位设 1 项，满分 20 分。", "locator": {"type": "docx_paragraph", "start": 10, "end": 10}}
+{"doc_id": "NET-08", "fact_no": 8, "text": "NET-F26 的时延统计按题面所给的计量单位书写，过程可以用顺序文字列出原始样本和有效样本。", "locator": {"type": "docx_paragraph", "start": 13, "end": 13}}
+{"doc_id": "NET-08", "fact_no": 9, "text": "NET-F26 不考模拟器菜单操作、设备厂商命令和光纤预算计算。", "locator": {"type": "docx_paragraph", "start": 14, "end": 14}}
+{"doc_id": "PY-01", "fact_no": 1, "text": "启明教育培训中心在 2026 年秋季学期通过启明学堂开设《Python 程序设计》。", "locator": {"type": "docx_paragraph", "start": 2, "end": 2}}
+{"doc_id": "PY-01", "fact_no": 2, "text": "本课程覆盖第 1 至第 16 周，共 64 学时，其中讲授 28 学时、实验 36 学时。", "locator": {"type": "docx_paragraph", "start": 3, "end": 3}}
+{"doc_id": "PY-01", "fact_no": 3, "text": "三部分讲义依次对应第 1 至第 5 周、第 6 至第 11 周和第 12 至第 16 周。", "locator": {"type": "docx_paragraph", "start": 4, "end": 4}}
+{"doc_id": "PY-01", "fact_no": 4, "text": "平时作业、实验和期末笔试分别占总评的 30%、32% 和 38%。", "locator": {"type": "docx_paragraph", "start": 6, "end": 6}}
+{"doc_id": "PY-01", "fact_no": 5, "text": "平时作业共 6 次，每次满分 100 分，前 3 次和后 3 次分别求平均，再按 40% 和 60% 合成作业成绩。", "locator": {"type": "docx_paragraph", "start": 7, "end": 7}}
+{"doc_id": "PY-01", "fact_no": 6, "text": "三项实验的实际得分相加得到百分制实验合成分，单项原始满分见实验指导书。", "locator": {"type": "docx_paragraph", "start": 8, "end": 8}}
+{"doc_id": "PY-01", "fact_no": 7, "text": "课程总评保留一位小数，四舍五入后达到 65.0 分为及格。", "locator": {"type": "docx_paragraph", "start": 8, "end": 8}}
+{"doc_id": "PY-01", "fact_no": 8, "text": "平时作业和实验自原截止时刻起迟交不超过 6 小时，仍按原始得分计。", "locator": {"type": "docx_paragraph", "start": 10, "end": 10}}
+{"doc_id": "PY-01", "fact_no": 9, "text": "迟交超过 6 小时且不超过 30 小时，减去该项原始得分的 10%，超过 30 小时记 0 分。", "locator": {"type": "docx_paragraph", "start": 10, "end": 10}}
+{"doc_id": "PY-01", "fact_no": 10, "text": "实验课一般请假应提前至少 8 小时通过启明学堂提交，注明拟缺席的课次。", "locator": {"type": "docx_paragraph", "start": 11, "end": 11}}
+{"doc_id": "PY-01", "fact_no": 11, "text": "连续 2 次实验课未获准缺席的学员不具备本学期期末笔试资格。", "locator": {"type": "docx_paragraph", "start": 11, "end": 11}}
+{"doc_id": "PY-01", "fact_no": 12, "text": "总评未及格且具备考试资格的学员可参加一次补考，时间为结课后第 2 周周日 10:30。", "locator": {"type": "docx_paragraph", "start": 12, "end": 12}}
+{"doc_id": "PY-01", "fact_no": 13, "text": "补考笔试百分制成绩达到 70 分时，课程总评记为 65.0 分。", "locator": {"type": "docx_paragraph", "start": 12, "end": 12}}
+{"doc_id": "PY-02", "fact_no": 1, "text": "第一部分在第 1 至第 5 周使用，课堂样本取自砾梧领签处的 LW-K05 档案。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "PY-02", "fact_no": 2, "text": "LW-K05 的课堂样本有 14 行原始领签记录，其中 12 行可转成合规记录。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "PY-02", "fact_no": 3, "text": "LW-K05 的每条合规记录按“领签编号、类别、张数”的顺序提供三个字段，字段间用竖线分隔。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "PY-02", "fact_no": 4, "text": "LW-K05 的合规记录涉及“来访签”“物料签”和“复核签”三个类别。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "PY-02", "fact_no": 5, "text": "入门例子中，记录 Q017 的类别为“来访签”，张数为 3，记录 Q018 的类别为“物料签”，张数为 5。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "PY-02", "fact_no": 6, "text": "入门练习批次编号为 LW-A2，课堂在每条记录的处理完成后保留一次简短的逐行读数。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "PY-02", "fact_no": 7, "text": "LW-K05 的示范异常行包含 Q021 的空张数字段和 Q024 的空类别字段。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "PY-02", "fact_no": 8, "text": "砾梧领签处的课堂观察单为 LW-O11，复查顺序为拆分、转换、归类。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "PY-02", "fact_no": 9, "text": "LW-A2 的课堂输出保留原始行号和分类结果两个部分。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "PY-03", "fact_no": 1, "text": "第二部分使用栎棱标本整理室的教学批次 LL-B17，采集日为 2026 年 10 月 27 日。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "PY-03", "fact_no": 2, "text": "批次 LL-B17 的输入档案号是 LL-IN17，记录由编号、柜位、件数和状态四个字段组成。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "PY-03", "fact_no": 3, "text": "LL-B17 依次执行字段验证、按记录编号去重、按柜位汇总。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "PY-03", "fact_no": 4, "text": "LL-B17 的有效条目须满足状态为“入柜”、件数是 1 至 30 的整数且柜位非空。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "PY-03", "fact_no": 5, "text": "LL-B17 中同一个记录编号出现多次时保留第一条有效记录。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "PY-03", "fact_no": 6, "text": "课堂验证日志保留原始行号、记录编号与处理状态，日志档案号为 LL-V13。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "PY-03", "fact_no": 7, "text": "栎棱标本整理室课堂规则为同一柜位有效件数合计达到 18 件时，标记为“优先复核”。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "PY-03", "fact_no": 8, "text": "LL-B17 的课堂柜位示例采用 C02、C08 和 C11 三个代号。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "PY-03", "fact_no": 9, "text": "进阶复核页编号为 LL-S16，按验证、去重、汇总三部分保存结果。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "PY-04", "fact_no": 1, "text": "综合演示分支编号为 LL-P24，沿用栎棱标本整理室批次 LL-B17 的处理口径。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "PY-04", "fact_no": 2, "text": "LL-P24 使用 LL-IN17 作为正常输入，使用 LL-E08 作为缺失和重复的边界输入档案。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "PY-04", "fact_no": 3, "text": "LL-P24 的摘要按柜位代号升序排列，每柜一行，末尾另写有效记录数。", "locator": {"type": "pdf_page", "start": 1, "end": 1}}
+{"doc_id": "PY-04", "fact_no": 4, "text": "LL-P24 遇到输入文件缺失时保留既有摘要，终端状态记为“输入缺失”。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "PY-04", "fact_no": 5, "text": "课堂把缺失检查记为 LL-P24M，把重复输入检查记为 LL-P24D。", "locator": {"type": "pdf_page", "start": 2, "end": 2}}
+{"doc_id": "PY-04", "fact_no": 6, "text": "两类边界运行的观察记录都归入 LL-T19，各自保留输入路径和摘要内容。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "PY-04", "fact_no": 7, "text": "正常摘要对照稿编号为 LL-O24，复盘顺序为读入、转换、汇总、写出。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "PY-04", "fact_no": 8, "text": "综合报告末尾需按固定顺序附正常、输入缺失、重复记录三种运行结果。", "locator": {"type": "pdf_page", "start": 3, "end": 3}}
+{"doc_id": "PY-05", "fact_no": 1, "text": "Python 实验以 Python 3.12 和标准库为统一复核环境。", "locator": {"type": "docx_paragraph", "start": 2, "end": 2}}
+{"doc_id": "PY-05", "fact_no": 2, "text": "三个启明学堂实验入口依次是“借签归类”“批次清洗”和“摘要与复测”。", "locator": {"type": "docx_paragraph", "start": 3, "end": 3}}
+{"doc_id": "PY-05", "fact_no": 3, "text": "实验一从第 3 周开始，读取砾梧领签处 LW-K05 的课堂样本。", "locator": {"type": "docx_paragraph", "start": 5, "end": 5}}
+{"doc_id": "PY-05", "fact_no": 4, "text": "实验一原始满分为 24 分，拆分与转换 8 分、分类累计 10 分、异常示例 6 分。", "locator": {"type": "docx_paragraph", "start": 6, "end": 6}}
+{"doc_id": "PY-05", "fact_no": 5, "text": "实验一截止于第 5 周周五 17:30，提交包名由 PYL1、连字符和实验代号组成。", "locator": {"type": "docx_paragraph", "start": 6, "end": 6}}
+{"doc_id": "PY-05", "fact_no": 6, "text": "实验二从第 8 周开始，使用栎棱标本整理室批次 LL-B17 的 LL-IN17 档案。", "locator": {"type": "docx_paragraph", "start": 8, "end": 8}}
+{"doc_id": "PY-05", "fact_no": 7, "text": "实验二原始满分为 34 分，验证规则 12 分、去重顺序 10 分、柜位汇总和复核判断 12 分。", "locator": {"type": "docx_paragraph", "start": 9, "end": 9}}
+{"doc_id": "PY-05", "fact_no": 8, "text": "实验二截止于第 10 周周二 20:00，提交包名由 PYL2、连字符和实验代号组成。", "locator": {"type": "docx_paragraph", "start": 9, "end": 9}}
+{"doc_id": "PY-05", "fact_no": 9, "text": "实验三从第 13 周开始，按综合分支 LL-P24 完成正常、缺失和重复输入的三种运行。", "locator": {"type": "docx_paragraph", "start": 11, "end": 11}}
+{"doc_id": "PY-05", "fact_no": 10, "text": "实验三原始满分为 42 分，入口与文件处理 14 分、摘要内容及顺序 14 分、三类复测证据 14 分。", "locator": {"type": "docx_paragraph", "start": 12, "end": 12}}
+{"doc_id": "PY-05", "fact_no": 11, "text": "实验三截止于第 15 周周三 18:30，提交包名由 PYL3、连字符和实验代号组成。", "locator": {"type": "docx_paragraph", "start": 12, "end": 12}}
+{"doc_id": "PY-05", "fact_no": 12, "text": "提交说明依次列出解释器版本、运行入口、输入路径、输出位置和复核步骤。", "locator": {"type": "docx_paragraph", "start": 15, "end": 15}}
+{"doc_id": "PY-06", "fact_no": 1, "text": "栎棱标本整理室教学批次 LL-B17 于 2026 年 10 月 27 日取样，正常输入档案为 LL-IN17。", "locator": {"type": "txt_line", "start": 3, "end": 3}}
+{"doc_id": "PY-06", "fact_no": 2, "text": "LL-IN17 使用 UTF-8 文本，每行依次为编号、柜位、件数、状态，字段之间以竖线分隔。", "locator": {"type": "txt_line", "start": 5, "end": 5}}
+{"doc_id": "PY-06", "fact_no": 3, "text": "LL-IN17 的第 1 行为 L601|C08|11|入柜，第 2 行为 L602|C08|7|入柜。", "locator": {"type": "txt_line", "start": 9, "end": 9}}
+{"doc_id": "PY-06", "fact_no": 4, "text": "LL-IN17 的第 3 行为 L603|C02|12|入柜，第 4 行为 L604|C02|5|入柜。", "locator": {"type": "txt_line", "start": 11, "end": 11}}
+{"doc_id": "PY-06", "fact_no": 5, "text": "LL-IN17 的第 5 行为 L605|C11|0|待核，第 6 行为 L605|C11|18|入柜。", "locator": {"type": "txt_line", "start": 15, "end": 15}}
+{"doc_id": "PY-06", "fact_no": 6, "text": "LL-IN17 的第 7 行为 L602|C02|20|入柜，第 8 行为 L606||4|入柜，第 9 行为 L607|C11|31|入柜。", "locator": {"type": "txt_line", "start": 17, "end": 17}}
+{"doc_id": "PY-06", "fact_no": 7, "text": "边界档案 LL-E08 的缺失运行 LL-P24M 约定输入位置为“待核目录/缺页.txt”，该位置在演示准备时为空缺。", "locator": {"type": "txt_line", "start": 25, "end": 25}}
+{"doc_id": "PY-06", "fact_no": 8, "text": "LL-E08 的重复运行 LL-P24D 按顺序读取两行，内容为 L701|C11|6|入柜 和 L701|C08|9|入柜。", "locator": {"type": "txt_line", "start": 27, "end": 27}}
+{"doc_id": "PY-06", "fact_no": 9, "text": "LL-IN17 的课堂登记列出 9 行，边界档案 LL-E08 的重复运行列出 2 行。", "locator": {"type": "txt_line", "start": 29, "end": 29}}
+{"doc_id": "PY-07", "fact_no": 1, "text": "《Python 程序设计》第 1 至第 5 周使用第一部分讲义。", "locator": {"type": "txt_line", "start": 3, "end": 3}}
+{"doc_id": "PY-07", "fact_no": 2, "text": "全部课程实验统一按 Python 3.12 和标准库复核。", "locator": {"type": "txt_line", "start": 7, "end": 7}}
+{"doc_id": "PY-07", "fact_no": 3, "text": "前 3 次作业和后 3 次作业分别求平均，再按 40% 和 60% 合成作业成绩。", "locator": {"type": "txt_line", "start": 11, "end": 11}}
+{"doc_id": "PY-07", "fact_no": 4, "text": "实验一“借签归类”使用 LW-K05，截止于第 5 周周五 17:30。", "locator": {"type": "txt_line", "start": 15, "end": 15}}
+{"doc_id": "PY-07", "fact_no": 5, "text": "实验二“批次清洗”使用 LL-IN17，截止于第 10 周周二 20:00。", "locator": {"type": "txt_line", "start": 19, "end": 19}}
+{"doc_id": "PY-07", "fact_no": 6, "text": "实验三“摘要与复测”截止于第 15 周周三 18:30。", "locator": {"type": "txt_line", "start": 23, "end": 23}}
+{"doc_id": "PY-07", "fact_no": 7, "text": "作业和实验迟交不超过 6 小时按原始得分计，超过 6 小时且不超过 30 小时减去原始得分的 10%，超过 30 小时记 0 分。", "locator": {"type": "txt_line", "start": 27, "end": 27}}
+{"doc_id": "PY-07", "fact_no": 8, "text": "连续 2 次实验课未获准缺席的学员不具备本学期期末笔试资格。", "locator": {"type": "txt_line", "start": 31, "end": 31}}
+{"doc_id": "PY-07", "fact_no": 9, "text": "期末卷面 PY-F26 的满分为 90 分。", "locator": {"type": "txt_line", "start": 35, "end": 35}}
+{"doc_id": "PY-07", "fact_no": 10, "text": "符合补考条件的学员可参加一次补考，时间为结课后第 2 周周日 10:30。", "locator": {"type": "txt_line", "start": 39, "end": 39}}
+{"doc_id": "PY-08", "fact_no": 1, "text": "本课程期末卷面代号为 PY-F26，满分 90 分，考试时长 100 分钟。", "locator": {"type": "docx_paragraph", "start": 2, "end": 2}}
+{"doc_id": "PY-08", "fact_no": 2, "text": "用实际卷面分除以 90 再乘以 100，得到课程总评计算所用的百分制笔试分。", "locator": {"type": "docx_paragraph", "start": 3, "end": 3}}
+{"doc_id": "PY-08", "fact_no": 3, "text": "卷面四类题型为阅读与追踪、语句和函数、文本处理、调试与验证，满分依次为 18、22、28、22 分。", "locator": {"type": "docx_paragraph", "start": 4, "end": 4}}
+{"doc_id": "PY-08", "fact_no": 4, "text": "阅读与追踪设 6 小项，每项 3 分。", "locator": {"type": "docx_paragraph", "start": 6, "end": 6}}
+{"doc_id": "PY-08", "fact_no": 5, "text": "语句和函数设 2 项，每项 11 分。", "locator": {"type": "docx_paragraph", "start": 7, "end": 7}}
+{"doc_id": "PY-08", "fact_no": 6, "text": "文本处理设 2 项，每项 14 分。", "locator": {"type": "docx_paragraph", "start": 9, "end": 9}}
+{"doc_id": "PY-08", "fact_no": 7, "text": "调试与验证设 2 项，每项 11 分。", "locator": {"type": "docx_paragraph", "start": 10, "end": 10}}
+{"doc_id": "PY-08", "fact_no": 8, "text": "PY-F26 允许用简洁的 Python 代码或清楚的文字说明追踪过程，题项另有指定表达方式时依题项要求。", "locator": {"type": "docx_paragraph", "start": 14, "end": 14}}
+{"doc_id": "PY-08", "fact_no": 9, "text": "PY-F26 不考第三方库、图形界面设计和异步编程。", "locator": {"type": "docx_paragraph", "start": 15, "end": 15}}

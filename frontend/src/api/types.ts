@@ -241,3 +241,54 @@ export interface QaLogQuery extends PageQuery {
   date_from?: string
   date_to?: string
 }
+
+// ---- M6：用户管理与课程管理 ----
+
+/** 管理员视角的用户。后端不返回密码或哈希。 */
+export interface AdminUser extends CurrentUser {
+  is_active: boolean
+  created_at: string
+}
+
+/** GET /admin/users 不分页，一次返回全部符合条件的用户。 */
+export interface AdminUserList {
+  items: AdminUser[]
+}
+
+/** GET /admin/users：按角色、启用状态筛选。 */
+export interface AdminUserListQuery {
+  role?: Role
+  is_active?: boolean
+}
+
+/** POST /admin/users：username 3–64 位（后端转小写），display_name 1–64，password 8–128。 */
+export interface AdminUserCreatePayload {
+  username: string
+  display_name: string
+  password: string
+  role: Role
+}
+
+/** PATCH /admin/users/{id}：只传要改的字段，不允许显式 null。 */
+export interface AdminUserUpdatePayload {
+  display_name?: string
+  role?: Role
+  is_active?: boolean
+}
+
+/** POST /admin/users/{id}/reset-password，成功返回 204。 */
+export interface ResetPasswordPayload {
+  new_password: string
+}
+
+/** POST /courses：name 1–100，description 可选且 ≤500。 */
+export interface CourseCreatePayload {
+  name: string
+  description?: string | null
+}
+
+/** PATCH /courses/{id}：name 不能为 null，description 传 null 表示清空。 */
+export interface CourseUpdatePayload {
+  name?: string
+  description?: string | null
+}

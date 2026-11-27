@@ -5,9 +5,11 @@ import { session } from '../stores/session'
 import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import PlaceholderView from '../views/PlaceholderView.vue'
+import AdminCoursesView from '../views/AdminCoursesView.vue'
 import AdminQaLogsView from '../views/AdminQaLogsView.vue'
 import AdminReviewsView from '../views/AdminReviewsView.vue'
 import AdminStatsView from '../views/AdminStatsView.vue'
+import AdminUsersView from '../views/AdminUsersView.vue'
 import MyResourcesView from '../views/MyResourcesView.vue'
 import ResourceDetailView from '../views/ResourceDetailView.vue'
 import QaView from '../views/QaView.vue'
@@ -18,6 +20,8 @@ const IMPLEMENTED_VIEWS: Record<string, RouteRecordRaw['component']> = {
   '/resources': ResourceListView,
   '/my-resources': MyResourcesView,
   '/qa': QaView,
+  '/admin/users': AdminUsersView,
+  '/admin/courses': AdminCoursesView,
   '/admin/reviews': AdminReviewsView,
   '/admin/stats': AdminStatsView,
   '/admin/qa-logs': AdminQaLogsView,
